@@ -1,0 +1,18 @@
+* source BUCK_NOISE
+R_Rcomp         N06540 N06752  80k TC=0,0 
+V_V5         VBUCK N06780   PWL   
++ REPEAT FOREVER 
++ FILE "F:\Swati\Result\buck\input_buck_noise.txt" 
++ ENDREPEAT
+V_V3         N06976 0 12
+R_Rcomp1         N06540 VCONTROL  10e6 TC=0,0 
+R_Rf1         N06664 VBUCK  9.76k TC=0,0 
+C_Chf         N06540 VCONTROL  30p  TC=0,0 
+C_Ccomp         N06752 VCONTROL  2n  TC=0,0 
+X_U1A         VREF N06540 N06976 N06804 VCONTROL LM324
+R_Rf2         0 N06664  3.25k TC=0,0 
+R_R1         N06664 N06540  1k TC=0,0 
+V_V4         0 N06804 12
+X_V6         VREF 0 VPULSEN PARAMS: V1=0 V2=2.5 TD=0 TR=4m TF=2m PW=1 PER=2
++  NVAL=0.15m
+X_V7         N06780 0 VRNDMN PARAMS: NVAL=0.15

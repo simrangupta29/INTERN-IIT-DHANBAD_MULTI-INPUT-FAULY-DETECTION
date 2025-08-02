@@ -1,0 +1,174 @@
+
+**** 04/26/25 19:12:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-fgffg"  [ F:\Swati\orcad_projects\leadlag_18apr-pspicefiles\schematic1\fgffg.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "fgffg.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 110ms 0 50us 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LEADLAG_18APR
+R_R3         N01476 VOUT  10k TC=0,0 
+V_V1         V+ 0 12
+R_R2         VP N01514  10k TC=0,0 
+R_R1         VN N01476  1k TC=0,0 
+V_V2         V- 0 -12
+X_U1         N01514 N01476 V+ V- VOUT uA741
+C_C2         0 N01514  1.595u  TC=0,0 
+C_C1         N01476 VOUT  0.1595u  TC=0,0 
+V_V3         VN 0  
++SIN 0 0.2 100 0 0 0
+V_V4         VP 0  
++SIN 0 0.4 10 0 0 0
+
+**** RESUMING fgffg.cir ****
+.END
+
+**** 04/26/25 19:12:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-fgffg"  [ F:\Swati\orcad_projects\leadlag_18apr-pspicefiles\schematic1\fgffg.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 04/26/25 19:12:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-fgffg"  [ F:\Swati\orcad_projects\leadlag_18apr-pspicefiles\schematic1\fgffg.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 04/26/25 19:12:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-fgffg"  [ F:\Swati\orcad_projects\leadlag_18apr-pspicefiles\schematic1\fgffg.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (   VN)    0.0000  (   VP)    0.0000      
+
+( VOUT)    -.0078  (N01476)-777.9E-06 (N01514)-797.3E-06 (X_U1.6) 741.0E-09     
+
+(X_U1.7)    -.0078 (X_U1.8)    -.0078 (X_U1.9)    0.0000 (X_U1.10)    -.6085    
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5946                   (X_U1.14)    -.5946                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)-698.2E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.337E-03
+    V_V2         1.337E-03
+    V_V3        -7.779E-07
+    V_V4        -7.973E-08
+    X_U1.vb      7.410E-12
+    X_U1.vc      1.101E-11
+    X_U1.ve      1.125E-11
+    X_U1.vlim   -6.982E-07
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/26/25 19:12:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-fgffg"  [ F:\Swati\orcad_projects\leadlag_18apr-pspicefiles\schematic1\fgffg.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .09
+

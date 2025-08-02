@@ -1,0 +1,396 @@
+
+**** 06/19/25 12:17:48 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-noise_trans"  [ F:\SIMRAN_INTERN\Orcade\noise_ramp-PSpiceFiles\SCHEMATIC1\noise_trans.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "noise_trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source NOISE_RAMP
+R_R12         N18124 N18136 R_R12 10k TC=0,0 
+.model        R_R12 RES R=1 DEV=5% TC1=0 TC2=0
+V_V1         VDD 0 2.4
+X_U3B         VX N17452 N17452 N17288 VSS awbmc33172
+X_U4B         VY N17464 N17464 N17288 VSS awbmc33172
+R_R52         N18136 N17840 R_R52 250k TC=0,0 
+.model        R_R52 RES R=1 DEV=5% TC1=0 TC2=0
+R_R22         N17808 VDD R_R22 1k TC=0,0 
+.model        R_R22 RES R=1 DEV=5% TC1=0 TC2=0
+R_R42         N17760 VOUT R_R42 500k TC=0,0 
+.model        R_R42 RES R=1 DEV=5% TC1=0 TC2=0
+V_V2         VSS 0 -2.4
+R_R32         N17808 N17760 R_R32 250k TC=0,0 
+.model        R_R32 RES R=1 DEV=5% TC1=0 TC2=0
+R_R31         N17288 N17512 R_R31 250k TC=0,0 
+.model        R_R31 RES R=1 DEV=5% TC1=0 TC2=0
+R_R11         N17452 N17464 R_R11 10k TC=0,0 
+.model        R_R11 RES R=1 DEV=5% TC1=0 TC2=0
+X_U5B         VX N18124 N18124 N17808 VSS awbmc33172
+X_U7B         N17512 N17760 VOUT VDD VSS awbmc33172
+R_R41         N17512 0 R_R41 500k TC=0,0 
+.model        R_R41 RES R=1 DEV=5% TC1=0 TC2=0
+R_R21         N17288 VDD R_R21 1k TC=0,0 
+.model        R_R21 RES R=1 DEV=5% TC1=0 TC2=0
+X_U6B         0 N17840 N18136 N17808 VSS awbmc33172
+R_R51         N17840 VY R_R51 250k TC=0,0 
+.model        R_R51 RES R=1 DEV=5% TC1=0 TC2=0
+X_V10         VX 0 VSINN PARAMS: FREQ=10k VAMPL=0.2 VOFF=0 PHASE=0 DF=0 TD=0
++  NVAL=0.02
+X_V11         VY 0 VSINN PARAMS: FREQ=100 VAMPL=0.2 VOFF=0 PHASE=0 DF=0 TD=0
++  NVAL=0.02
+E_E3         WITH_NOISE CLEAN VALUE { (RNDR-0.5)/5 }
+R_R63         0 WITH_NOISE  1k TC=0,0 
+V_V17         CLEAN 0 1
+
+**** RESUMING noise_trans.cir ****
+.END
+
+**** 06/19/25 12:17:48 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-noise_trans"  [ F:\SIMRAN_INTERN\Orcade\noise_ramp-PSpiceFiles\SCHEMATIC1\noise_trans.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3B.M1M33174_D4               X_U3B.M2MID     X_U3B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U3B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U4B.M1M33174_D4               X_U4B.M2MID     X_U4B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U4B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U5B.M1M33174_D4               X_U5B.M2MID     X_U5B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U5B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U7B.M1M33174_D4               X_U7B.M2MID     X_U7B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U7B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U6B.M1M33174_D4               X_U6B.M2MID     X_U6B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U6B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+**** 06/19/25 12:17:48 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-noise_trans"  [ F:\SIMRAN_INTERN\Orcade\noise_ramp-PSpiceFiles\SCHEMATIC1\noise_trans.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R12           R_R52           R_R22           R_R42           
+           R    1               1               1               1            
+
+
+               R_R32           R_R31           R_R11           R_R41           
+           R    1               1               1               1            
+
+
+               R_R21           R_R51           
+           R    1               1            
+
+
+**** 06/19/25 12:17:48 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-noise_trans"  [ F:\SIMRAN_INTERN\Orcade\noise_ramp-PSpiceFiles\SCHEMATIC1\noise_trans.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)     .0100  (   VY)     .0100  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .0205  (CLEAN)    1.0000  (N17288)    2.3275 (N17452)     .0118     
+
+(N17464)     .0118 (N17512)    1.5569 (N17760)    1.5586 (N17808)    2.3255     
+
+(N17840)     .0018 (N18124)     .0118 (N18136)    -.0085 (X_U3B.1)    -.0363    
+
+(X_U3B.3)    -.0363                   (X_U3B.4)    -.0363                       
+
+(X_U3B.5)    4.9637                   (X_U3B.6)    -.0344                       
+
+(X_U3B.7)    -.0362                   (X_U3B.8)     .0118                       
+
+(X_U3B.9)    1.9402                   (X_U4B.1)    -.0363                       
+
+(X_U4B.3)    -.0363                   (X_U4B.4)    -.0363                       
+
+(X_U4B.5)    4.9637                   (X_U4B.6)    -.0344                       
+
+(X_U4B.7)    -.0362                   (X_U4B.8)     .0118                       
+
+(X_U4B.9)    1.9402                   (X_U5B.1)    -.0372                       
+
+(X_U5B.3)    -.0372                   (X_U5B.4)    -.0372                       
+
+(X_U5B.5)    4.9628                   (X_U5B.6)    -.0354                       
+
+(X_U5B.7)    -.0372                   (X_U5B.8)     .0118                       
+
+(X_U5B.9)    1.8304                   (X_U6B.1)    -.0372                       
+
+(X_U6B.3)    -.0372                   (X_U6B.4)    -.0372                       
+
+(X_U6B.5)    4.9628                   (X_U6B.6)    -.0354                       
+
+(X_U6B.7)    -.0372                   (X_U6B.8)    -.0085                       
+
+(X_U6B.9)    2.8203                   (X_U7B.1) 99.04E-09                       
+
+(X_U7B.3) 99.04E-09                   (X_U7B.4)-779.9E-09                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 21.18E-06                   (X_U7B.8)     .0205                       
+
+(X_U7B.9)    2.9052                   (X_V10.M)    0.0000                       
+
+(X_V11.M)    0.0000                   (X_U3B.11)     .0118                      
+
+(X_U3B.12) -191.0400                  (X_U3B.15)     .0118                      
+
+(X_U3B.17)     .0109                  (X_U3B.18)     .0118                      
+
+(X_U3B.19)   -5.0363                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)     .0100                  (X_U3B.23)    2.3275                      
+
+(X_U3B.25)     .0109                  (X_U3B.26)    -.0363                      
+
+(X_U3B.28)   99.9640                  (X_U3B.34)     .9475                      
+
+(X_U3B.37)     .0118                  (X_U3B.41)     .0118                      
+
+(X_U4B.11)     .0118                  (X_U4B.12) -191.0400                      
+
+(X_U4B.15)     .0118                  (X_U4B.17)     .0109                      
+
+(X_U4B.18)     .0118                  (X_U4B.19)   -5.0363                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)     .0100                      
+
+(X_U4B.23)    2.3275                  (X_U4B.25)     .0109                      
+
+(X_U4B.26)    -.0363                  (X_U4B.28)   99.9640                      
+
+(X_U4B.34)     .9424                  (X_U4B.37)     .0118                      
+
+(X_U4B.41)     .0118                  (X_U5B.11)     .0118                      
+
+(X_U5B.12) -191.0400                  (X_U5B.15)     .0118                      
+
+(X_U5B.17)     .0109                  (X_U5B.18)     .0118                      
+
+(X_U5B.19)   -5.0372                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)     .0100                  (X_U5B.23)    2.3255                      
+
+(X_U5B.25)     .0109                  (X_U5B.26)    -.0372                      
+
+(X_U5B.28)   99.9630                  (X_U5B.34)     .9455                      
+
+(X_U5B.37)     .0118                  (X_U5B.41)     .0118                      
+
+(X_U6B.11)    -.0086                  (X_U6B.12) -191.0400                      
+
+(X_U6B.15)    -.0085                  (X_U6B.17) 892.9E-06                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.0372                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 47.26E-06                      
+
+(X_U6B.23)    2.3255                  (X_U6B.25) 892.9E-06                      
+
+(X_U6B.26)    -.0372                  (X_U6B.28)   99.9630                      
+
+(X_U6B.34)     .9455                  (X_U6B.37)    -.0086                      
+
+(X_U6B.41)    -.0086                  (X_U7B.11)     .0204                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .0205                      
+
+(X_U7B.17)    1.5578                  (X_U7B.18)    1.5587                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5569                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5578                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .0205                  (X_U7B.41)     .0205                      
+
+(WITH_NOISE)     .9002                
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.822E-04
+    V_V2         1.790E-04
+    V_V17       -9.002E-04
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   1.622E-12
+    X_U3B.VFI100  -3.191E-08
+    X_U3B.VIC2  -8.091E-09
+    X_U3B.VV219   9.457E-13
+    X_U3B.VV234  -5.010E-12
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.622E-12
+    X_U4B.VFI100  -3.191E-08
+    X_U4B.VIC2  -8.091E-09
+    X_U4B.VV219   9.407E-13
+    X_U4B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   1.622E-12
+    X_U5B.VFI100  -2.063E-06
+    X_U5B.VIC2   2.023E-06
+    X_U5B.VV219   9.438E-13
+    X_U5B.VV234  -5.010E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   1.630E-12
+    X_U7B.VFI100   3.036E-06
+    X_U7B.VIC2  -3.076E-06
+    X_U7B.VV219   1.010E-12
+    X_U7B.VV234  -5.010E-12
+    X_U6B.VV262  -5.010E-12
+    X_U6B.VV261  -1.000E-10
+    X_U6B.VV256  -1.910E-10
+    X_U6B.VV245   1.601E-12
+    X_U6B.VFI100   2.032E-06
+    X_U6B.VIC2  -2.072E-06
+    X_U6B.VV219   9.641E-13
+    X_U6B.VV234  -5.010E-12
+    X_V10.VSIN   6.286E-08
+    X_V11.VSIN  -1.335E-09
+
+    TOTAL POWER DISSIPATION   1.77E-03  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+
+          JOB CONCLUDED
+
+**** 06/19/25 12:17:48 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-noise_trans"  [ F:\SIMRAN_INTERN\Orcade\noise_ramp-PSpiceFiles\SCHEMATIC1\noise_trans.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =       58.00
+

@@ -1,0 +1,8 @@
+* PSpice Model Editor - Version 17.2.0
+
+*$
+.model 31DQ10 D(Is=56.46E-06 N=2.202 Rs=28.27E-03 Ikf=0.5957 Xti=2 Eg=1.11
++ Cjo=199.3E-12 M=0.4572 Vj=1.873 Fc=0.5 Isr=165.6E-24 Nr=4.955
++ Bv=119.9 Ibv=215.5E-06 Tt=21.64E-09)
+
+*$

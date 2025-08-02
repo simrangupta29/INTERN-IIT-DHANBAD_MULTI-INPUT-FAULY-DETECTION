@@ -1,0 +1,17 @@
+.ALIASES
+R_R1            R1(1=IN 2=N00307 ) CN @CKT_NOISE.SCHEMATIC1(sch_1):INS71@ANALOG.R.Normal(chips)
+R_R2            R2(1=N00286 2=OUT ) CN @CKT_NOISE.SCHEMATIC1(sch_1):INS87@ANALOG.R.Normal(chips)
+R_R3            R3(1=0 2=OUT ) CN @CKT_NOISE.SCHEMATIC1(sch_1):INS103@ANALOG.R.Normal(chips)
+R_R4            R4(1=N00341 2=VDD ) CN @CKT_NOISE.SCHEMATIC1(sch_1):INS119@ANALOG.R.Normal(chips)
+R_R5            R5(1=N00307 2=N00286 ) CN @CKT_NOISE.SCHEMATIC1(sch_1):INS135@ANALOG.R.Normal(chips)
+C_C1            C1(1=N00286 2=OUT ) CN @CKT_NOISE.SCHEMATIC1(sch_1):INS160@ANALOG.C.Normal(chips)
+V_V1            V1(+=N00341 -=0 ) CN @CKT_NOISE.SCHEMATIC1(sch_1):INS205@SOURCE.VDC.Normal(chips)
+V_V2            V2(+=0 -=VSS ) CN @CKT_NOISE.SCHEMATIC1(sch_1):INS221@SOURCE.VDC.Normal(chips)
+X_U3            U3(+=0 -=N00307 V+=VDD V-=VSS OUT=OUT ) CN @CKT_NOISE.SCHEMATIC1(sch_1):INS682@OPAMP.LM741.Normal(chips)
+V_V4            V4(+=IN -=N01555 ) CN @CKT_NOISE.SCHEMATIC1(sch_1):INS1435@SOURCE.VSIN.Normal(chips)
+X_V5            V5(+=N01555 -=0 ) CN @CKT_NOISE.SCHEMATIC1(sch_1):INS1506@SOURCE.VRNDMN.Normal(chips)
+_    _(in=IN)
+_    _(out=OUT)
+_    _(Vdd=VDD)
+_    _(Vss=VSS)
+.ENDALIASES

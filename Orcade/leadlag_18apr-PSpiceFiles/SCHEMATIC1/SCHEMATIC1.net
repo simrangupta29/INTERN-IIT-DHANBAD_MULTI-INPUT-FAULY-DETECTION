@@ -1,0 +1,13 @@
+* source LEADLAG_18APR
+R_R3         N01476 VOUT  10k TC=0,0 
+V_V1         V+ 0 12
+R_R2         VP N01514  10k TC=0,0 
+R_R1         VN N01476  1k TC=0,0 
+V_V2         V- 0 -12
+X_U1         N01514 N01476 V+ V- VOUT uA741
+C_C2         0 N01514  1.595u  TC=0,0 
+C_C1         N01476 VOUT  0.1595u  TC=0,0 
+V_V3         VN 0  
++SIN 0 0.2 100 0 0 0
+V_V4         VP 0  
++SIN 0 0.4 10 0 0 0

@@ -1,0 +1,7 @@
+.ALIASES
+V_V4            V4(+=CLEAN -=0 ) CN @DESIGN1.SCHEMATIC1(sch_1):INS812@SOURCE.VDC.Normal(chips)
+E_E1            E1(OUT+=WITH_NOISE OUT-=CLEAN ) CN @DESIGN1.SCHEMATIC1(sch_1):INS748@ABM.EVALUE.Normal(chips)
+R_R2            R2(1=0 2=WITH_NOISE ) CN @DESIGN1.SCHEMATIC1(sch_1):INS776@ANALOG.R.Normal(chips)
+_    _(Clean=CLEAN)
+_    _(With_Noise=WITH_NOISE)
+.ENDALIASES

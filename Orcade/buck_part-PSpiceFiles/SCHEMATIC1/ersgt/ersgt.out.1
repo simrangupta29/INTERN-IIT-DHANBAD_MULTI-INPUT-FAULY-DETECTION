@@ -1,0 +1,952 @@
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ersgt.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1.5ms 0 0.53372u 
+.MC 10 TRAN V([VCONTROL]) YMAX OUTPUT ALL 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source BUCK_PART
+C_Chf         N00381 VCONTROL C_Chf 30p  TC=0,0 
+.model        C_Chf CAP C=1 DEV=5% TC1=0 TC2=0 VC1=0 VC2=0
+C_Ccomp         N00405 VCONTROL C_Ccomp 2n  TC=0,0 
+.model        C_Ccomp CAP C=1 DEV=5% TC1=0 TC2=0 VC1=0 VC2=0
+R_Rcomp1         N00381 VCONTROL R_Rcomp1 10e6 TC=0,0 
+.model        R_Rcomp1 RES R=1 DEV=5% TC1=0 TC2=0
+R_Rcomp         N00381 N00405 R_Rcomp 80k TC=0,0 
+.model        R_Rcomp RES R=1 DEV=5% TC1=0 TC2=0
+R_R1         N00476 N00381 R_R1 1k TC=0,0 
+.model        R_R1 RES R=1 DEV=5% TC1=0 TC2=0
+R_Rf1         N00476 VBUCK R_Rf1 9.76k TC=0,0 
+.model        R_Rf1 RES R=1 DEV=5% TC1=0 TC2=0
+R_Rf2         0 N00476 R_Rf2 3.25k TC=0,0 
+.model        R_Rf2 RES R=1 DEV=5% TC1=0 TC2=0
+X_U1A         N00532 N00381 N00618 N00606 VCONTROL LM324
+V_V2         N00532 0  
++PULSE 0 2.5 0 4m 2m 1 2
+V_V3         N00618 0 12
+V_V4         0 N00606 12
+V_V5         VBUCK 0   PWL   
++ REPEAT FOREVER 
++ FILE "F:\Swati\Result\buck\input_for_PI.txt" 
++ ENDREPEAT
+
+**** RESUMING ersgt.cir ****
+.END
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.dx        X_U1A.dy        
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.qx        
+               PNP             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_Rcomp1        R_Rcomp         R_R1            R_Rf1           
+           R    1               1               1               1            
+
+
+               R_Rf2           
+           R    1            
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     Capacitor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               C_Chf           C_Ccomp         
+           C    1               1            
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.sw2       X_U1A.sw1       X_U1A.sw3       X_U1A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO NOMINAL
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK) 382.2E-06  (N00381)-180.0E-06 (N00405)-180.0E-06 (N00476)-99.86E-06     
+
+(N00532)    0.0000 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6) 235.8E-06    
+
+(X_U1A.7)   -1.2508                   (X_U1A.8)   -1.2508                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-4.551E-06                   (VCONTROL)   -1.2508                      
+
+(X_U1A.10)     .6076                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9600                  (X_U1A.13)     .5937                      
+
+(X_U1A.14)     .5937                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)-125.1E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         4.474E-08
+    V_V3        -2.660E-03
+    V_V4        -2.660E-03
+    V_V5        -4.939E-08
+    X_U1A.vb     2.358E-09
+    X_U1A.vc     1.175E-11
+    X_U1A.ve     1.012E-11
+    X_U1A.vlim  -1.251E-07
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.38E-02  WATTS
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 2
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK) 382.2E-06  (N00381)-179.7E-06 (N00405)-179.7E-06 (N00476)-101.1E-06     
+
+(N00532)    0.0000 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6) 240.2E-06    
+
+(X_U1A.7)   -1.2742                   (X_U1A.8)   -1.2742                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-4.611E-06                   (VCONTROL)   -1.2742                      
+
+(X_U1A.10)     .6076                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9600                  (X_U1A.13)     .5937                      
+
+(X_U1A.14)     .5937                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)-125.7E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         4.474E-08
+    V_V3        -2.660E-03
+    V_V4        -2.660E-03
+    V_V5        -4.884E-08
+    X_U1A.vb     2.402E-09
+    X_U1A.vc     1.178E-11
+    X_U1A.ve     1.016E-11
+    X_U1A.vlim  -1.257E-07
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.38E-02  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  1.120E-03.
+         Time step =  216.8E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U1A.90)               =    3.997mV  \    3.972mV
+
+  These supply currents failed to converge:
+
+    I(X_U1A.egnd)             =   -3.904uA  \   -3.872uA
+    I(X_U1A.vb)               =   -3.929nA  \   -3.941nA
+    I(X_U1A.vc)               =  -184.36nA  \  -314.93nA
+    I(X_U1A.ve)               =   184.73nA  \   315.76nA
+    I(X_U1A.vlim)             =    3.997uA  \    3.972uA
+
+  These devices failed to converge:
+    X_U1A.dc  X_U1A.de  
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK)    2.8280  (N00381)     .6995 (N00405)    1.0228 (N00476)     .6956     
+
+(N00532)     .7000 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6)-392.9E-06    
+
+(X_U1A.7)    2.0749                   (X_U1A.8)    2.0749                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-5.197E-06                   (VCONTROL)    2.0747                      
+
+(X_U1A.10)    1.3073                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9610                  (X_U1A.13)    1.2934                      
+
+(X_U1A.14)    1.2936                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)     .0040                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 3
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK) 382.2E-06  (N00381)-179.5E-06 (N00405)-179.5E-06 (N00476)-100.5E-06     
+
+(N00532)    0.0000 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6) 245.6E-06    
+
+(X_U1A.7)   -1.3029                   (X_U1A.8)   -1.3029                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-4.571E-06                   (VCONTROL)   -1.3029                      
+
+(X_U1A.10)     .6076                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9600                  (X_U1A.13)     .5937                      
+
+(X_U1A.14)     .5937                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)-125.3E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         4.474E-08
+    V_V3        -2.660E-03
+    V_V4        -2.660E-03
+    V_V5        -5.027E-08
+    X_U1A.vb     2.456E-09
+    X_U1A.vc     1.180E-11
+    X_U1A.ve     1.014E-11
+    X_U1A.vlim  -1.253E-07
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.38E-02  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  1.430E-03.
+         Time step =  433.7E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U1A.6)                =   647.43uV  \   645.37uV
+    V(X_U1A.90)               =   -8.683mV  \   -8.724mV
+
+  These supply currents failed to converge:
+
+    I(X_U1A.egnd)             =    8.817uA  \    8.858uA
+    I(X_U1A.vb)               =    6.474nA  \    6.454nA
+    I(X_U1A.vc)               =  -280.05nA  \  -497.93nA
+    I(X_U1A.ve)               =   282.03nA  \   499.96nA
+    I(X_U1A.vlim)             =   -8.683uA  \   -8.724uA
+
+  These devices failed to converge:
+    X_U1A.dc  X_U1A.de  
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK)    3.5740  (N00381)     .8932 (N00405)     .2244 (N00476)     .9017     
+
+(N00532)     .8938 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6) 647.4E-06    
+
+(X_U1A.7)   -3.4484                   (X_U1A.8)   -3.4484                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a) 9.883E-06                       
+
+(X_U1A.b)  -12.0000                   (VCONTROL)   -3.4480                      
+
+(X_U1A.10)    1.5010                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9610                  (X_U1A.13)    1.4871                      
+
+(X_U1A.14)    1.4873                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)    -.0087                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 4
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK) 382.2E-06  (N00381)-179.8E-06 (N00405)-179.8E-06 (N00476)-98.83E-06     
+
+(N00532)    0.0000 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6) 239.6E-06    
+
+(X_U1A.7)   -1.2709                   (X_U1A.8)   -1.2709                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-4.458E-06                   (VCONTROL)   -1.2709                      
+
+(X_U1A.10)     .6076                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9600                  (X_U1A.13)     .5937                      
+
+(X_U1A.14)     .5937                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)-124.1E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         4.474E-08
+    V_V3        -2.660E-03
+    V_V4        -2.660E-03
+    V_V5        -4.870E-08
+    X_U1A.vb     2.396E-09
+    X_U1A.vc     1.177E-11
+    X_U1A.ve     1.017E-11
+    X_U1A.vlim  -1.241E-07
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.38E-02  WATTS
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 5
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK) 382.2E-06  (N00381)-180.6E-06 (N00405)-180.6E-06 (N00476)-101.8E-06     
+
+(N00532)    0.0000 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6) 224.6E-06    
+
+(X_U1A.7)   -1.1915                   (X_U1A.8)   -1.1915                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-4.472E-06                   (VCONTROL)   -1.1915                      
+
+(X_U1A.10)     .6076                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9600                  (X_U1A.13)     .5937                      
+
+(X_U1A.14)     .5937                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)-124.2E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         4.474E-08
+    V_V3        -2.660E-03
+    V_V4        -2.660E-03
+    V_V5        -4.805E-08
+    X_U1A.vb     2.246E-09
+    X_U1A.vc     1.169E-11
+    X_U1A.ve     1.025E-11
+    X_U1A.vlim  -1.242E-07
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.38E-02  WATTS
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 6
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK) 382.2E-06  (N00381)-179.6E-06 (N00405)-179.6E-06 (N00476)-94.52E-06     
+
+(N00532)    0.0000 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6) 242.4E-06    
+
+(X_U1A.7)   -1.2857                   (X_U1A.8)   -1.2857                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-4.662E-06                   (VCONTROL)   -1.2857                      
+
+(X_U1A.10)     .6076                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9600                  (X_U1A.13)     .5937                      
+
+(X_U1A.14)     .5937                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)-126.2E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         4.474E-08
+    V_V3        -2.660E-03
+    V_V4        -2.660E-03
+    V_V5        -5.106E-08
+    X_U1A.vb     2.424E-09
+    X_U1A.vc     1.179E-11
+    X_U1A.ve     1.015E-11
+    X_U1A.vlim  -1.262E-07
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.38E-02  WATTS
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 7
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK) 382.2E-06  (N00381)-179.7E-06 (N00405)-179.7E-06 (N00476)-99.01E-06     
+
+(N00532)    0.0000 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6) 240.1E-06    
+
+(X_U1A.7)   -1.2736                   (X_U1A.8)   -1.2736                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-4.549E-06                   (VCONTROL)   -1.2736                      
+
+(X_U1A.10)     .6076                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9600                  (X_U1A.13)     .5937                      
+
+(X_U1A.14)     .5937                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)-125.0E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         4.474E-08
+    V_V3        -2.660E-03
+    V_V4        -2.660E-03
+    V_V5        -4.814E-08
+    X_U1A.vb     2.401E-09
+    X_U1A.vc     1.177E-11
+    X_U1A.ve     1.016E-11
+    X_U1A.vlim  -1.250E-07
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.38E-02  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  1.205E-03.
+         Time step =  143.0E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U1A.6)                =  -787.16uV  \  -795.21uV
+    V(X_U1A.90)               =     9.68mV  \     9.52mV
+
+  These supply currents failed to converge:
+
+    I(X_U1A.egnd)             =   -9.414uA  \   -9.261uA
+    I(X_U1A.vb)               =   -7.872nA  \   -7.952nA
+    I(X_U1A.vc)               =   870.69nA  \    17.23nA
+    I(X_U1A.ve)               =  -865.42nA  \   -10.32nA
+    I(X_U1A.vlim)             =     9.68uA  \     9.52uA
+
+  These devices failed to converge:
+    X_U1A.dc  X_U1A.de  
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK)    3.0477  (N00381)     .7535 (N00405)    1.5203 (N00476)     .7438     
+
+(N00532)     .7532 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6)-787.2E-06    
+
+(X_U1A.7)    4.2191                   (X_U1A.8)    4.2191                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-10.88E-06                   (VCONTROL)    4.2186                      
+
+(X_U1A.10)    1.3609                  (X_U1A.11)  -11.9610                      
+
+(X_U1A.12)  -11.9600                  (X_U1A.13)    1.3471                      
+
+(X_U1A.14)    1.3470                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)     .0097                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 8
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK) 382.2E-06  (N00381)-179.4E-06 (N00405)-179.4E-06 (N00476)-98.79E-06     
+
+(N00532)    0.0000 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6) 247.4E-06    
+
+(X_U1A.7)   -1.3124                   (X_U1A.8)   -1.3124                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-4.728E-06                   (VCONTROL)   -1.3124                      
+
+(X_U1A.10)     .6076                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9600                  (X_U1A.13)     .5937                      
+
+(X_U1A.14)     .5937                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)-126.8E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         4.474E-08
+    V_V3        -2.660E-03
+    V_V4        -2.660E-03
+    V_V5        -5.098E-08
+    X_U1A.vb     2.474E-09
+    X_U1A.vc     1.181E-11
+    X_U1A.ve     1.013E-11
+    X_U1A.vlim  -1.268E-07
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.38E-02  WATTS
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 9
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK) 382.2E-06  (N00381)-180.3E-06 (N00405)-180.3E-06 (N00476)-99.71E-06     
+
+(N00532)    0.0000 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6) 230.4E-06    
+
+(X_U1A.7)   -1.2222                   (X_U1A.8)   -1.2222                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-4.374E-06                   (VCONTROL)   -1.2222                      
+
+(X_U1A.10)     .6076                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9600                  (X_U1A.13)     .5937                      
+
+(X_U1A.14)     .5937                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)-123.2E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         4.474E-08
+    V_V3        -2.660E-03
+    V_V4        -2.660E-03
+    V_V5        -4.867E-08
+    X_U1A.vb     2.304E-09
+    X_U1A.vc     1.172E-11
+    X_U1A.ve     1.022E-11
+    X_U1A.vlim  -1.232E-07
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.38E-02  WATTS
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO PASS 10
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(VBUCK) 382.2E-06  (N00381)-180.0E-06 (N00405)-180.0E-06 (N00476)-103.1E-06     
+
+(N00532)    0.0000 (N00606)  -12.0000 (N00618)   12.0000 (X_U1A.6) 235.8E-06    
+
+(X_U1A.7)   -1.2507                   (X_U1A.8)   -1.2507                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   12.0000                       
+
+(X_U1A.b)-4.376E-06                   (VCONTROL)   -1.2507                      
+
+(X_U1A.10)     .6076                  (X_U1A.11)  -11.9600                      
+
+(X_U1A.12)  -11.9600                  (X_U1A.13)     .5937                      
+
+(X_U1A.14)     .5937                  (X_U1A.53)   10.5000                      
+
+(X_U1A.54)  -11.1780                  (X_U1A.90)-123.2E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         4.474E-08
+    V_V3        -2.660E-03
+    V_V4        -2.660E-03
+    V_V5        -4.768E-08
+    X_U1A.vb     2.358E-09
+    X_U1A.vc     1.175E-11
+    X_U1A.ve     1.019E-11
+    X_U1A.vlim  -1.232E-07
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.38E-02  WATTS
+
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     SORTED DEVIATIONS OF V(VCONTROL) TEMPERATURE =   27.000 DEG C
+
+                      MONTE CARLO SUMMARY
+
+******************************************************************************
+
+
+
+
+
+Mean Deviation =    0     
+Sigma          =    0     
+
+ RUN                    MAX DEVIATION FROM NOMINAL
+
+
+
+          JOB CONCLUDED
+
+**** 01/23/25 12:36:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ersgt"  [ F:\Swati\orcad_projects\buck_part-pspicefiles\schematic1\ersgt.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =       65.45
+

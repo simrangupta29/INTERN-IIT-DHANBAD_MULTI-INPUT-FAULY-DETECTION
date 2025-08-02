@@ -1,0 +1,5 @@
+* source RANDOM_NOISE
+R_R2         0 WITH_NOISE  1k TC=0,0 
+V_V4         CLEAN 0 1
+E_E1         WITH_NOISE CLEAN VALUE { (RNDC-0.2)/5 }
+.PARAM  sweep=1

@@ -1,0 +1,5 @@
+* source DESIGN1
+V_V4         CLEAN 0 1
+E_E1         WITH_NOISE CLEAN VALUE { (RNDC-0.5)/5 }
+R_R2         0 WITH_NOISE  1k TC=0,0 
+.PARAM  sweep=1

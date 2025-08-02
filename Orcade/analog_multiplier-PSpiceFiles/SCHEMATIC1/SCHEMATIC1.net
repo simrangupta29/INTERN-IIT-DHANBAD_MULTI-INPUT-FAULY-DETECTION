@@ -1,0 +1,32 @@
+* source ANALOG_MULTIPLIER
+R_R51         N05955 VY R_R51 250k TC=0,0 
+.model        R_R51 RES R=1 DEV=5% TC1=0 TC2=0
+X_U6B         0 N05955 N06251 N05921 VSS awbmc33172
+R_R22         N05921 VDD R_R22 1k TC=0,0 
+.model        R_R22 RES R=1 DEV=5% TC1=0 TC2=0
+R_R21         N05413 VDD R_R21 1k TC=0,0 
+.model        R_R21 RES R=1 DEV=5% TC1=0 TC2=0
+X_U7B         N05623 N05881 VOUT VDD VSS awbmc33172
+X_U3B         VX N05563 N05563 N05413 VSS awbmc33172
+X_U4B         VY N05575 N05575 N05413 VSS awbmc33172
+R_R12         N06239 N06251 R_R12 10k TC=0,0 
+.model        R_R12 RES R=1 DEV=5% TC1=0 TC2=0
+R_R52         N06251 N05955 R_R52 250k TC=0,0 
+.model        R_R52 RES R=1 DEV=5% TC1=0 TC2=0
+V_V6         VY 0  
++SIN 0 0.2 100 0 0 0
+R_R31         N05413 N05623 R_R31 250k TC=0,0 
+.model        R_R31 RES R=1 DEV=5% TC1=0 TC2=0
+R_R32         N05921 N05881 R_R32 250k TC=0,0 
+.model        R_R32 RES R=1 DEV=5% TC1=0 TC2=0
+X_U5B         VX N06239 N06239 N05921 VSS awbmc33172
+R_R11         N05563 N05575 R_R11 10k TC=0,0 
+.model        R_R11 RES R=1 DEV=5% TC1=0 TC2=0
+R_R41         N05623 0 R_R41 500k TC=0,0 
+.model        R_R41 RES R=1 DEV=5% TC1=0 TC2=0
+V_V1         VDD 0 2.4
+V_V2         VSS 0 -2.4
+V_V7         VX 0  
++SIN 0 0.2 10k 0 0 0
+R_R42         N05881 VOUT R_R42 500k TC=0,0 
+.model        R_R42 RES R=1 DEV=5% TC1=0 TC2=0

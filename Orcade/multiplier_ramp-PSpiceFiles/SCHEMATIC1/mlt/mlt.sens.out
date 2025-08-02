@@ -1,0 +1,2862 @@
+**** Analysis Setup ****
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "mlt.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 50u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MULTIPLIER_RAMP
+V_V8         VX 0  
++PULSE -1 1 0 10m 0 0 10m
+V_V9         VY 0  
++PULSE -1.5 1.5 0 10m 0 0 10m
+R_R42         N15801 VOUT R_R42 500k TC=0,0 
+.model        R_R42 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R52         N16111 N15867 R_R52 250k TC=0,0 
+.model        R_R52 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R22         N15841 VDD R_R22 1k TC=0,0 
+.model        R_R22 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R21         N15395 VDD R_R21 1k TC=0,0 
+.model        R_R21 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+X_U4B         VY N15557 N15557 N15395 VSS awbmc33172
+V_V2         VSS 0 -2.4
+R_R12         N16099 N16111 R_R12 10k TC=0,0 
+.model        R_R12 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+X_U6B         0 N15867 N16111 N15841 VSS awbmc33172
+X_U7B         N15605 N15801 VOUT VDD VSS awbmc33172
+R_R31         N15395 N15605 R_R31 250k TC=0,0 
+.model        R_R31 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R51         N15867 VY R_R51 250k TC=0,0 
+.model        R_R51 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R11         N15545 N15557 R_R11 10k TC=0,0 
+.model        R_R11 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+X_U5B         VX N16099 N16099 N15841 VSS awbmc33172
+V_V1         VDD 0 2.4
+R_R32         N15841 N15801 R_R32 250k TC=0,0 
+.model        R_R32 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R41         N15605 0 R_R41 500k TC=0,0 
+.model        R_R41 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+X_U3B         VX N15545 N15545 N15395 VSS awbmc33172
+
+**** RESUMING mlt.cir ****
+.END
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U4B.M1M33174_D4               X_U4B.M2MID     X_U4B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U4B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U6B.M1M33174_D4               X_U6B.M2MID     X_U6B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U6B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U7B.M1M33174_D4               X_U7B.M2MID     X_U7B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U7B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U5B.M1M33174_D4               X_U5B.M2MID     X_U5B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U5B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U3B.M1M33174_D4               X_U3B.M2MID     X_U3B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U3B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R42           R_R52           R_R22           R_R21           
+           R    1               1               1               1            
+
+
+               R_R12           R_R31           R_R51           R_R11           
+           R    1               1               1               1            
+
+
+               R_R32           R_R41           
+           R    1               1            
+
+
+WARNING(ORPSIM-15459): In device V_V8, default values (TF=1.00e-09) are used for zero TR and TF. Use the DEFTR and DEFTF options to control these defaults. To disable default value usage for zero TR and TF, specify the DISABLE_DEFAULT_PULSE_PARAMS option.
+
+WARNING(ORPSIM-15459): In device V_V9, default values (TF=1.00e-09) are used for zero TR and TF. Use the DEFTR and DEFTF options to control these defaults. To disable default value usage for zero TR and TF, specify the DISABLE_DEFAULT_PULSE_PARAMS option.
+**** Param: R_R42.Value = 500k
+**** Param: R_R52.Value = 250k
+**** Param: R_R22.Value = 1k
+**** Param: R_R21.Value = 1k
+**** Param: R_R12.Value = 10k
+**** Param: R_R31.Value = 250k
+**** Param: R_R51.Value = 250k
+**** Param: R_R11.Value = 10k
+**** Param: R_R32.Value = 250k
+**** Param: R_R41.Value = 500k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity nominal run          
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .4002  (N15395)    2.2783 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5241 (N15801)    1.5259 (N15841)    2.0865 (N15867)    -.0300     
+
+(N16099)    -.9982 (N16111)    1.3983 (X_U3B.1)    -.0608                       
+
+(X_U3B.3)    -.0608                   (X_U3B.4)    -.0608                       
+
+(X_U3B.5)    4.9392                   (X_U3B.6)    -.0590                       
+
+(X_U3B.7)    -.0618                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7007                   (X_U4B.1)    -.0608                       
+
+(X_U4B.3)    -.0608                   (X_U4B.4)    -.0608                       
+
+(X_U4B.5)    4.9392                   (X_U4B.6)    -.0590                       
+
+(X_U4B.7)    -.0623                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8559                   (X_U5B.1)    -.1567                       
+
+(X_U5B.3)    -.1567                   (X_U5B.4)    -.1567                       
+
+(X_U5B.5)    4.8433                   (X_U5B.6)    -.1549                       
+
+(X_U5B.7)    -.1576                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7047                   (X_U6B.1)    -.1567                       
+
+(X_U6B.3)    -.1567                   (X_U6B.4)    -.8745                       
+
+(X_U6B.5)    4.8433                   (X_U6B.6)    -.1549                       
+
+(X_U6B.7)   17.0560                   (X_U6B.8)    1.3983                       
+
+(X_U6B.9)    1.3910                   (X_U7B.1) 98.76E-09                       
+
+(X_U7B.3) 98.76E-09                   (X_U7B.4)-17.30E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 417.3E-06                   (X_U7B.8)     .4002                       
+
+(X_U7B.9)    2.8969                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0608                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2783                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0608                      
+
+(X_U3B.28)   99.9390                  (X_U3B.34)     .8983                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0608                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2783                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0608                  (X_U4B.28)   99.9390                      
+
+(X_U4B.34)     .8983                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0054                      
+
+(X_U5B.12) -191.1600                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1567                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0865                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1567                      
+
+(X_U5B.28)   99.8430                  (X_U5B.34)     .7065                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5416                  (X_U6B.12) -191.1600                      
+
+(X_U6B.15)    1.3983                  (X_U6B.17)    -.0150                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1567                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.87E-06                      
+
+(X_U6B.23)    2.0865                  (X_U6B.25)    -.0150                      
+
+(X_U6B.26)    -.1567                  (X_U6B.28)   99.8430                      
+
+(X_U6B.34)     .7065                  (X_U6B.37)    1.4007                      
+
+(X_U6B.41)    1.4007                  (X_U7B.11)     .4001                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .4002                      
+
+(X_U7B.17)    1.5250                  (X_U7B.18)    1.5259                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5241                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5250                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .4002                  (X_U7B.41)     .4002                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.912E-06
+    V_V2         4.615E-04
+    V_V1        -4.704E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.998E-05
+    X_U4B.VIC2  -5.002E-05
+    X_U4B.VV219   2.407E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.728E-12
+    X_U6B.VV261  -8.280E-11
+    X_U6B.VV256  -2.082E-10
+    X_U6B.VV245   3.011E-12
+    X_U6B.VFI100  -4.778E-03
+    X_U6B.VIC2   2.454E-04
+    X_U6B.VV219  -4.532E-03
+    X_U6B.VV234  -4.292E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   2.010E-12
+    X_U7B.VFI100   2.207E-06
+    X_U7B.VIC2  -2.247E-06
+    X_U7B.VV219   6.298E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.396E-04
+    X_U5B.VIC2  -2.397E-04
+    X_U5B.VV219   1.717E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.002E-05
+    X_U3B.VIC2   4.998E-05
+    X_U3B.VV219   1.906E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.50E-03  WATTS
+
+**** Param: R_R42.Value = 510k
+**** Param: R_R52.Value = 250k
+**** Param: R_R22.Value = 1k
+**** Param: R_R21.Value = 1k
+**** Param: R_R12.Value = 10k
+**** Param: R_R31.Value = 250k
+**** Param: R_R51.Value = 250k
+**** Param: R_R11.Value = 10k
+**** Param: R_R32.Value = 250k
+**** Param: R_R41.Value = 500k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity run 1                
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .3777  (N15395)    2.2783 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5241 (N15801)    1.5259 (N15841)    2.0865 (N15867)    -.0300     
+
+(N16099)    -.9982 (N16111)    1.3983 (X_U3B.1)    -.0608                       
+
+(X_U3B.3)    -.0608                   (X_U3B.4)    -.0608                       
+
+(X_U3B.5)    4.9392                   (X_U3B.6)    -.0590                       
+
+(X_U3B.7)    -.0618                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7007                   (X_U4B.1)    -.0608                       
+
+(X_U4B.3)    -.0608                   (X_U4B.4)    -.0608                       
+
+(X_U4B.5)    4.9392                   (X_U4B.6)    -.0590                       
+
+(X_U4B.7)    -.0623                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8559                   (X_U5B.1)    -.1567                       
+
+(X_U5B.3)    -.1567                   (X_U5B.4)    -.1567                       
+
+(X_U5B.5)    4.8433                   (X_U5B.6)    -.1549                       
+
+(X_U5B.7)    -.1576                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7047                   (X_U6B.1)    -.1567                       
+
+(X_U6B.3)    -.1567                   (X_U6B.4)    -.8745                       
+
+(X_U6B.5)    4.8433                   (X_U6B.6)    -.1549                       
+
+(X_U6B.7)   17.0560                   (X_U6B.8)    1.3983                       
+
+(X_U6B.9)    1.3910                   (X_U7B.1) 98.76E-09                       
+
+(X_U7B.3) 98.76E-09                   (X_U7B.4)-16.32E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 393.8E-06                   (X_U7B.8)     .3777                       
+
+(X_U7B.9)    2.8969                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0608                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2783                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0608                      
+
+(X_U3B.28)   99.9390                  (X_U3B.34)     .8983                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0608                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2783                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0608                  (X_U4B.28)   99.9390                      
+
+(X_U4B.34)     .8983                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0054                      
+
+(X_U5B.12) -191.1600                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1567                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0865                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1567                      
+
+(X_U5B.28)   99.8430                  (X_U5B.34)     .7065                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5416                  (X_U6B.12) -191.1600                      
+
+(X_U6B.15)    1.3983                  (X_U6B.17)    -.0150                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1567                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.87E-06                      
+
+(X_U6B.23)    2.0865                  (X_U6B.25)    -.0150                      
+
+(X_U6B.26)    -.1567                  (X_U6B.28)   99.8430                      
+
+(X_U6B.34)     .7065                  (X_U6B.37)    1.4007                      
+
+(X_U6B.41)    1.4007                  (X_U7B.11)     .3776                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .3777                      
+
+(X_U7B.17)    1.5250                  (X_U7B.18)    1.5259                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5241                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5250                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .3776                  (X_U7B.41)     .3776                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.912E-06
+    V_V2         4.615E-04
+    V_V1        -4.704E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.998E-05
+    X_U4B.VIC2  -5.002E-05
+    X_U4B.VV219   2.407E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.728E-12
+    X_U6B.VV261  -8.280E-11
+    X_U6B.VV256  -2.082E-10
+    X_U6B.VV245   3.011E-12
+    X_U6B.VFI100  -4.778E-03
+    X_U6B.VIC2   2.454E-04
+    X_U6B.VV219  -4.532E-03
+    X_U6B.VV234  -4.292E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   1.988E-12
+    X_U7B.VFI100   2.208E-06
+    X_U7B.VIC2  -2.248E-06
+    X_U7B.VV219   6.524E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.396E-04
+    X_U5B.VIC2  -2.397E-04
+    X_U5B.VV219   1.717E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.002E-05
+    X_U3B.VIC2   4.998E-05
+    X_U3B.VV219   1.906E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.50E-03  WATTS
+
+**** Param: R_R42.Value = 500k
+**** Param: R_R52.Value = 255k
+**** Param: R_R22.Value = 1k
+**** Param: R_R21.Value = 1k
+**** Param: R_R12.Value = 10k
+**** Param: R_R31.Value = 250k
+**** Param: R_R51.Value = 250k
+**** Param: R_R11.Value = 10k
+**** Param: R_R32.Value = 250k
+**** Param: R_R41.Value = 500k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity run 2                
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .4001  (N15395)    2.2783 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5241 (N15801)    1.5259 (N15841)    2.0866 (N15867)    -.0386     
+
+(N16099)    -.9982 (N16111)    1.3985 (X_U3B.1)    -.0608                       
+
+(X_U3B.3)    -.0608                   (X_U3B.4)    -.0608                       
+
+(X_U3B.5)    4.9392                   (X_U3B.6)    -.0590                       
+
+(X_U3B.7)    -.0618                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7007                   (X_U4B.1)    -.0608                       
+
+(X_U4B.3)    -.0608                   (X_U4B.4)    -.0608                       
+
+(X_U4B.5)    4.9392                   (X_U4B.6)    -.0590                       
+
+(X_U4B.7)    -.0623                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8559                   (X_U5B.1)    -.1567                       
+
+(X_U5B.3)    -.1567                   (X_U5B.4)    -.1567                       
+
+(X_U5B.5)    4.8433                   (X_U5B.6)    -.1548                       
+
+(X_U5B.7)    -.1576                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7047                   (X_U6B.1)    -.1567                       
+
+(X_U6B.3)    -.1567                   (X_U6B.4)   -1.0690                       
+
+(X_U6B.5)    4.8433                   (X_U6B.6)    -.1548                       
+
+(X_U6B.7)   21.7200                   (X_U6B.8)    1.3985                       
+
+(X_U6B.9)    1.3909                   (X_U7B.1) 98.76E-09                       
+
+(X_U7B.3) 98.76E-09                   (X_U7B.4)-17.30E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 417.2E-06                   (X_U7B.8)     .4001                       
+
+(X_U7B.9)    2.8969                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0608                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2783                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0608                      
+
+(X_U3B.28)   99.9390                  (X_U3B.34)     .8983                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0608                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2783                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0608                  (X_U4B.28)   99.9390                      
+
+(X_U4B.34)     .8983                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0054                      
+
+(X_U5B.12) -191.1600                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1567                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0866                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1567                      
+
+(X_U5B.28)   99.8430                  (X_U5B.34)     .7066                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5427                  (X_U6B.12) -191.1600                      
+
+(X_U6B.15)    1.3985                  (X_U6B.17)    -.0193                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1567                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.87E-06                      
+
+(X_U6B.23)    2.0866                  (X_U6B.25)    -.0193                      
+
+(X_U6B.26)    -.1567                  (X_U6B.28)   99.8430                      
+
+(X_U6B.34)     .7066                  (X_U6B.37)    1.4009                      
+
+(X_U6B.41)    1.4009                  (X_U7B.11)     .4000                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .4001                      
+
+(X_U7B.17)    1.5250                  (X_U7B.18)    1.5259                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5241                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5250                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .4000                  (X_U7B.41)     .4000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.877E-06
+    V_V2         4.615E-04
+    V_V1        -4.703E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.998E-05
+    X_U4B.VIC2  -5.002E-05
+    X_U4B.VV219   2.407E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.922E-12
+    X_U6B.VV261  -7.813E-11
+    X_U6B.VV256  -2.129E-10
+    X_U6B.VV245   3.011E-12
+    X_U6B.VFI100  -4.808E-03
+    X_U6B.VIC2   2.453E-04
+    X_U6B.VV219  -4.563E-03
+    X_U6B.VV234  -4.098E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   2.010E-12
+    X_U7B.VFI100   2.208E-06
+    X_U7B.VIC2  -2.248E-06
+    X_U7B.VV219   6.300E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.396E-04
+    X_U5B.VIC2  -2.397E-04
+    X_U5B.VV219   1.717E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.002E-05
+    X_U3B.VIC2   4.998E-05
+    X_U3B.VV219   1.906E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.54E-03  WATTS
+
+**** Param: R_R42.Value = 500k
+**** Param: R_R52.Value = 250k
+**** Param: R_R22.Value = 1.02000000000000k
+**** Param: R_R21.Value = 1k
+**** Param: R_R12.Value = 10k
+**** Param: R_R31.Value = 250k
+**** Param: R_R51.Value = 250k
+**** Param: R_R11.Value = 10k
+**** Param: R_R32.Value = 250k
+**** Param: R_R41.Value = 500k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity run 3                
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .4113  (N15395)    2.2783 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5241 (N15801)    1.5259 (N15841)    2.0809 (N15867)    -.0317     
+
+(N16099)    -.9982 (N16111)    1.3927 (X_U3B.1)    -.0608                       
+
+(X_U3B.3)    -.0608                   (X_U3B.4)    -.0608                       
+
+(X_U3B.5)    4.9392                   (X_U3B.6)    -.0590                       
+
+(X_U3B.7)    -.0618                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7007                   (X_U4B.1)    -.0608                       
+
+(X_U4B.3)    -.0608                   (X_U4B.4)    -.0608                       
+
+(X_U4B.5)    4.9392                   (X_U4B.6)    -.0590                       
+
+(X_U4B.7)    -.0623                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8559                   (X_U5B.1)    -.1595                       
+
+(X_U5B.3)    -.1595                   (X_U5B.4)    -.1595                       
+
+(X_U5B.5)    4.8405                   (X_U5B.6)    -.1577                       
+
+(X_U5B.7)    -.1604                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.6990                   (X_U6B.1)    -.1595                       
+
+(X_U6B.3)    -.1595                   (X_U6B.4)    -.9158                       
+
+(X_U6B.5)    4.8405                   (X_U6B.6)    -.1577                       
+
+(X_U6B.7)   17.9770                   (X_U6B.8)    1.3927                       
+
+(X_U6B.9)    1.3854                   (X_U7B.1) 98.75E-09                       
+
+(X_U7B.3) 98.75E-09                   (X_U7B.4)-17.79E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 429.0E-06                   (X_U7B.8)     .4113                       
+
+(X_U7B.9)    2.8967                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0608                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2783                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0608                      
+
+(X_U3B.28)   99.9390                  (X_U3B.34)     .8983                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0608                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2783                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0608                  (X_U4B.28)   99.9390                      
+
+(X_U4B.34)     .8983                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0054                      
+
+(X_U5B.12) -191.1600                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1595                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0809                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1595                      
+
+(X_U5B.28)   99.8400                  (X_U5B.34)     .7009                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5363                  (X_U6B.12) -191.1600                      
+
+(X_U6B.15)    1.3927                  (X_U6B.17)    -.0158                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1595                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.81E-06                      
+
+(X_U6B.23)    2.0809                  (X_U6B.25)    -.0158                      
+
+(X_U6B.26)    -.1595                  (X_U6B.28)   99.8400                      
+
+(X_U6B.34)     .7009                  (X_U6B.37)    1.3952                      
+
+(X_U6B.41)    1.3952                  (X_U7B.11)     .4113                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .4113                      
+
+(X_U7B.17)    1.5250                  (X_U7B.18)    1.5259                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5241                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5250                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .4113                  (X_U7B.41)     .4113                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.905E-06
+    V_V2         4.608E-04
+    V_V1        -4.697E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.998E-05
+    X_U4B.VIC2  -5.002E-05
+    X_U4B.VV219   2.407E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.766E-12
+    X_U6B.VV261  -8.187E-11
+    X_U6B.VV256  -2.091E-10
+    X_U6B.VV245   3.005E-12
+    X_U6B.VFI100  -4.784E-03
+    X_U6B.VIC2   2.448E-04
+    X_U6B.VV219  -4.540E-03
+    X_U6B.VV234  -4.254E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   2.021E-12
+    X_U7B.VFI100   2.185E-06
+    X_U7B.VIC2  -2.225E-06
+    X_U7B.VV219   6.187E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.391E-04
+    X_U5B.VIC2  -2.391E-04
+    X_U5B.VV219   1.712E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.002E-05
+    X_U3B.VIC2   4.998E-05
+    X_U3B.VV219   1.906E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.51E-03  WATTS
+
+**** Param: R_R42.Value = 500k
+**** Param: R_R52.Value = 250k
+**** Param: R_R22.Value = 1k
+**** Param: R_R21.Value = 1.02000000000000k
+**** Param: R_R12.Value = 10k
+**** Param: R_R31.Value = 250k
+**** Param: R_R51.Value = 250k
+**** Param: R_R11.Value = 10k
+**** Param: R_R32.Value = 250k
+**** Param: R_R41.Value = 500k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity run 4                
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .3954  (N15395)    2.2759 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5225 (N15801)    1.5243 (N15841)    2.0865 (N15867)    -.0300     
+
+(N16099)    -.9982 (N16111)    1.3983 (X_U3B.1)    -.0620                       
+
+(X_U3B.3)    -.0620                   (X_U3B.4)    -.0620                       
+
+(X_U3B.5)    4.9380                   (X_U3B.6)    -.0602                       
+
+(X_U3B.7)    -.0630                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.6983                   (X_U4B.1)    -.0620                       
+
+(X_U4B.3)    -.0620                   (X_U4B.4)    -.0620                       
+
+(X_U4B.5)    4.9380                   (X_U4B.6)    -.0602                       
+
+(X_U4B.7)    -.0635                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8535                   (X_U5B.1)    -.1567                       
+
+(X_U5B.3)    -.1567                   (X_U5B.4)    -.1567                       
+
+(X_U5B.5)    4.8433                   (X_U5B.6)    -.1549                       
+
+(X_U5B.7)    -.1576                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7047                   (X_U6B.1)    -.1567                       
+
+(X_U6B.3)    -.1567                   (X_U6B.4)    -.8746                       
+
+(X_U6B.5)    4.8433                   (X_U6B.6)    -.1549                       
+
+(X_U6B.7)   17.0570                   (X_U6B.8)    1.3983                       
+
+(X_U6B.9)    1.3910                   (X_U7B.1) 98.77E-09                       
+
+(X_U7B.3) 98.77E-09                   (X_U7B.4)-17.09E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 412.3E-06                   (X_U7B.8)     .3954                       
+
+(X_U7B.9)    2.8970                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0620                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2759                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0620                      
+
+(X_U3B.28)   99.9380                  (X_U3B.34)     .8959                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0620                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2759                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0620                  (X_U4B.28)   99.9380                      
+
+(X_U4B.34)     .8959                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0054                      
+
+(X_U5B.12) -191.1600                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1567                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0865                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1567                      
+
+(X_U5B.28)   99.8430                  (X_U5B.34)     .7065                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5416                  (X_U6B.12) -191.1600                      
+
+(X_U6B.15)    1.3983                  (X_U6B.17)    -.0150                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1567                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.87E-06                      
+
+(X_U6B.23)    2.0865                  (X_U6B.25)    -.0150                      
+
+(X_U6B.26)    -.1567                  (X_U6B.28)   99.8430                      
+
+(X_U6B.34)     .7065                  (X_U6B.37)    1.4007                      
+
+(X_U6B.41)    1.4007                  (X_U7B.11)     .3953                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .3954                      
+
+(X_U7B.17)    1.5234                  (X_U7B.18)    1.5243                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5225                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5234                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .3954                  (X_U7B.41)     .3954                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.912E-06
+    V_V2         4.614E-04
+    V_V1        -4.703E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.998E-05
+    X_U4B.VIC2  -5.002E-05
+    X_U4B.VV219   2.405E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.728E-12
+    X_U6B.VV261  -8.280E-11
+    X_U6B.VV256  -2.082E-10
+    X_U6B.VV245   3.011E-12
+    X_U6B.VFI100  -4.778E-03
+    X_U6B.VIC2   2.454E-04
+    X_U6B.VV219  -4.532E-03
+    X_U6B.VV234  -4.292E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   2.005E-12
+    X_U7B.VFI100   2.214E-06
+    X_U7B.VIC2  -2.254E-06
+    X_U7B.VV219   6.346E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.396E-04
+    X_U5B.VIC2  -2.397E-04
+    X_U5B.VV219   1.717E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.002E-05
+    X_U3B.VIC2   4.998E-05
+    X_U3B.VV219   1.904E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.50E-03  WATTS
+
+**** Param: R_R42.Value = 500k
+**** Param: R_R52.Value = 250k
+**** Param: R_R22.Value = 1k
+**** Param: R_R21.Value = 1k
+**** Param: R_R12.Value = 10.20000000000000k
+**** Param: R_R31.Value = 250k
+**** Param: R_R51.Value = 250k
+**** Param: R_R11.Value = 10k
+**** Param: R_R32.Value = 250k
+**** Param: R_R41.Value = 500k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity run 5                
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .3918  (N15395)    2.2783 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5241 (N15801)    1.5259 (N15841)    2.0907 (N15867)    -.0287     
+
+(N16099)    -.9982 (N16111)    1.4025 (X_U3B.1)    -.0608                       
+
+(X_U3B.3)    -.0608                   (X_U3B.4)    -.0608                       
+
+(X_U3B.5)    4.9392                   (X_U3B.6)    -.0590                       
+
+(X_U3B.7)    -.0618                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7007                   (X_U4B.1)    -.0608                       
+
+(X_U4B.3)    -.0608                   (X_U4B.4)    -.0608                       
+
+(X_U4B.5)    4.9392                   (X_U4B.6)    -.0590                       
+
+(X_U4B.7)    -.0623                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8559                   (X_U5B.1)    -.1546                       
+
+(X_U5B.3)    -.1546                   (X_U5B.4)    -.1546                       
+
+(X_U5B.5)    4.8454                   (X_U5B.6)    -.1528                       
+
+(X_U5B.7)    -.1555                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7084                   (X_U6B.1)    -.1546                       
+
+(X_U6B.3)    -.1546                   (X_U6B.4)    -.8430                       
+
+(X_U6B.5)    4.8454                   (X_U6B.6)    -.1528                       
+
+(X_U6B.7)   16.3530                   (X_U6B.8)    1.4025                       
+
+(X_U6B.9)    1.3952                   (X_U7B.1) 98.77E-09                       
+
+(X_U7B.3) 98.77E-09                   (X_U7B.4)-16.93E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 408.6E-06                   (X_U7B.8)     .3918                       
+
+(X_U7B.9)    2.8971                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0608                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2783                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0608                      
+
+(X_U3B.28)   99.9390                  (X_U3B.34)     .8983                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0608                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2783                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0608                  (X_U4B.28)   99.9390                      
+
+(X_U4B.34)     .8983                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0053                      
+
+(X_U5B.12) -191.1500                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1546                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0907                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1546                      
+
+(X_U5B.28)   99.8450                  (X_U5B.34)     .7107                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5457                  (X_U6B.12) -191.1500                      
+
+(X_U6B.15)    1.4025                  (X_U6B.17)    -.0143                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1546                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.91E-06                      
+
+(X_U6B.23)    2.0907                  (X_U6B.25)    -.0143                      
+
+(X_U6B.26)    -.1546                  (X_U6B.28)   99.8450                      
+
+(X_U6B.34)     .7107                  (X_U6B.37)    1.4049                      
+
+(X_U6B.41)    1.4049                  (X_U7B.11)     .3917                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .3918                      
+
+(X_U7B.17)    1.5250                  (X_U7B.18)    1.5259                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5241                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5250                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .3918                  (X_U7B.41)     .3918                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.917E-06
+    V_V2         4.573E-04
+    V_V1        -4.662E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.998E-05
+    X_U4B.VIC2  -5.002E-05
+    X_U4B.VV219   2.407E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.698E-12
+    X_U6B.VV261  -8.350E-11
+    X_U6B.VV256  -2.075E-10
+    X_U6B.VV245   3.015E-12
+    X_U6B.VFI100  -4.772E-03
+    X_U6B.VIC2   2.411E-04
+    X_U6B.VV219  -4.531E-03
+    X_U6B.VV234  -4.322E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   2.002E-12
+    X_U7B.VFI100   2.224E-06
+    X_U7B.VIC2  -2.264E-06
+    X_U7B.VV219   6.382E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.353E-04
+    X_U5B.VIC2  -2.354E-04
+    X_U5B.VV219   1.721E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.002E-05
+    X_U3B.VIC2   4.998E-05
+    X_U3B.VV219   1.906E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.48E-03  WATTS
+
+**** Param: R_R42.Value = 500k
+**** Param: R_R52.Value = 250k
+**** Param: R_R22.Value = 1k
+**** Param: R_R21.Value = 1k
+**** Param: R_R12.Value = 10k
+**** Param: R_R31.Value = 255k
+**** Param: R_R51.Value = 250k
+**** Param: R_R11.Value = 10k
+**** Param: R_R32.Value = 250k
+**** Param: R_R41.Value = 500k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity run 6                
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .3703  (N15395)    2.2783 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5141 (N15801)    1.5159 (N15841)    2.0865 (N15867)    -.0300     
+
+(N16099)    -.9982 (N16111)    1.3982 (X_U3B.1)    -.0608                       
+
+(X_U3B.3)    -.0608                   (X_U3B.4)    -.0608                       
+
+(X_U3B.5)    4.9392                   (X_U3B.6)    -.0590                       
+
+(X_U3B.7)    -.0618                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7007                   (X_U4B.1)    -.0608                       
+
+(X_U4B.3)    -.0608                   (X_U4B.4)    -.0608                       
+
+(X_U4B.5)    4.9392                   (X_U4B.6)    -.0590                       
+
+(X_U4B.7)    -.0623                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8559                   (X_U5B.1)    -.1568                       
+
+(X_U5B.3)    -.1568                   (X_U5B.4)    -.1567                       
+
+(X_U5B.5)    4.8432                   (X_U5B.6)    -.1549                       
+
+(X_U5B.7)    -.1577                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7046                   (X_U6B.1)    -.1568                       
+
+(X_U6B.3)    -.1568                   (X_U6B.4)    -.8748                       
+
+(X_U6B.5)    4.8432                   (X_U6B.6)    -.1549                       
+
+(X_U6B.7)   17.0620                   (X_U6B.8)    1.3982                       
+
+(X_U6B.9)    1.3909                   (X_U7B.1) 98.78E-09                       
+
+(X_U7B.3) 98.78E-09                   (X_U7B.4)-16.00E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 386.2E-06                   (X_U7B.8)     .3703                       
+
+(X_U7B.9)    2.8974                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0608                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2783                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0608                      
+
+(X_U3B.28)   99.9390                  (X_U3B.34)     .8983                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0608                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2783                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0608                  (X_U4B.28)   99.9390                      
+
+(X_U4B.34)     .8983                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0054                      
+
+(X_U5B.12) -191.1600                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1568                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0865                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1568                      
+
+(X_U5B.28)   99.8430                  (X_U5B.34)     .7065                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5416                  (X_U6B.12) -191.1600                      
+
+(X_U6B.15)    1.3982                  (X_U6B.17)    -.0150                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1568                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.86E-06                      
+
+(X_U6B.23)    2.0865                  (X_U6B.25)    -.0150                      
+
+(X_U6B.26)    -.1568                  (X_U6B.28)   99.8430                      
+
+(X_U6B.34)     .7065                  (X_U6B.37)    1.4007                      
+
+(X_U6B.41)    1.4007                  (X_U7B.11)     .3703                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .3703                      
+
+(X_U7B.17)    1.5150                  (X_U7B.18)    1.5159                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5142                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5150                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .3703                  (X_U7B.41)     .3703                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.912E-06
+    V_V2         4.615E-04
+    V_V1        -4.704E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.998E-05
+    X_U4B.VIC2  -5.002E-05
+    X_U4B.VV219   2.407E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.728E-12
+    X_U6B.VV261  -8.279E-11
+    X_U6B.VV256  -2.082E-10
+    X_U6B.VV245   3.011E-12
+    X_U6B.VFI100  -4.778E-03
+    X_U6B.VIC2   2.454E-04
+    X_U6B.VV219  -4.532E-03
+    X_U6B.VV234  -4.292E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   1.980E-12
+    X_U7B.VFI100   2.247E-06
+    X_U7B.VIC2  -2.287E-06
+    X_U7B.VV219   6.597E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.396E-04
+    X_U5B.VIC2  -2.397E-04
+    X_U5B.VV219   1.717E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.002E-05
+    X_U3B.VIC2   4.998E-05
+    X_U3B.VV219   1.906E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.50E-03  WATTS
+
+**** Param: R_R42.Value = 500k
+**** Param: R_R52.Value = 250k
+**** Param: R_R22.Value = 1k
+**** Param: R_R21.Value = 1k
+**** Param: R_R12.Value = 10k
+**** Param: R_R31.Value = 250k
+**** Param: R_R51.Value = 255k
+**** Param: R_R11.Value = 10k
+**** Param: R_R32.Value = 250k
+**** Param: R_R41.Value = 500k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity run 7                
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .4001  (N15395)    2.2783 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5241 (N15801)    1.5259 (N15841)    2.0866 (N15867)    -.0211     
+
+(N16099)    -.9982 (N16111)    1.3981 (X_U3B.1)    -.0608                       
+
+(X_U3B.3)    -.0608                   (X_U3B.4)    -.0608                       
+
+(X_U3B.5)    4.9392                   (X_U3B.6)    -.0590                       
+
+(X_U3B.7)    -.0618                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7007                   (X_U4B.1)    -.0608                       
+
+(X_U4B.3)    -.0608                   (X_U4B.4)    -.0608                       
+
+(X_U4B.5)    4.9392                   (X_U4B.6)    -.0590                       
+
+(X_U4B.7)    -.0623                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8559                   (X_U5B.1)    -.1567                       
+
+(X_U5B.3)    -.1567                   (X_U5B.4)    -.1567                       
+
+(X_U5B.5)    4.8433                   (X_U5B.6)    -.1548                       
+
+(X_U5B.7)    -.1576                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7047                   (X_U6B.1)    -.1567                       
+
+(X_U6B.3)    -.1567                   (X_U6B.4)    -.6740                       
+
+(X_U6B.5)    4.8433                   (X_U6B.6)    -.1548                       
+
+(X_U6B.7)   12.2480                   (X_U6B.8)    1.3981                       
+
+(X_U6B.9)    1.3913                   (X_U7B.1) 98.76E-09                       
+
+(X_U7B.3) 98.76E-09                   (X_U7B.4)-17.30E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 417.2E-06                   (X_U7B.8)     .4001                       
+
+(X_U7B.9)    2.8969                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0608                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2783                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0608                      
+
+(X_U3B.28)   99.9390                  (X_U3B.34)     .8983                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0608                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2783                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0608                  (X_U4B.28)   99.9390                      
+
+(X_U4B.34)     .8983                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0054                      
+
+(X_U5B.12) -191.1600                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1567                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0866                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1567                      
+
+(X_U5B.28)   99.8430                  (X_U5B.34)     .7066                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5402                  (X_U6B.12) -191.1600                      
+
+(X_U6B.15)    1.3981                  (X_U6B.17)    -.0105                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1567                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.87E-06                      
+
+(X_U6B.23)    2.0866                  (X_U6B.25)    -.0105                      
+
+(X_U6B.26)    -.1567                  (X_U6B.28)   99.8430                      
+
+(X_U6B.34)     .7066                  (X_U6B.37)    1.4005                      
+
+(X_U6B.41)    1.4005                  (X_U7B.11)     .4000                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .4001                      
+
+(X_U7B.17)    1.5250                  (X_U7B.18)    1.5259                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5241                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5250                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .4000                  (X_U7B.41)     .4000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.831E-06
+    V_V2         4.615E-04
+    V_V1        -4.703E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.998E-05
+    X_U4B.VIC2  -5.002E-05
+    X_U4B.VV219   2.407E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.527E-12
+    X_U6B.VV261  -8.760E-11
+    X_U6B.VV256  -2.034E-10
+    X_U6B.VV245   3.011E-12
+    X_U6B.VFI100  -4.736E-03
+    X_U6B.VIC2   2.453E-04
+    X_U6B.VV219  -4.491E-03
+    X_U6B.VV234  -4.493E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   2.010E-12
+    X_U7B.VFI100   2.208E-06
+    X_U7B.VIC2  -2.248E-06
+    X_U7B.VV219   6.300E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.396E-04
+    X_U5B.VIC2  -2.396E-04
+    X_U5B.VV219   1.717E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.002E-05
+    X_U3B.VIC2   4.998E-05
+    X_U3B.VV219   1.906E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.44E-03  WATTS
+
+**** Param: R_R42.Value = 500k
+**** Param: R_R52.Value = 250k
+**** Param: R_R22.Value = 1k
+**** Param: R_R21.Value = 1k
+**** Param: R_R12.Value = 10k
+**** Param: R_R31.Value = 250k
+**** Param: R_R51.Value = 250k
+**** Param: R_R11.Value = 10.20000000000000k
+**** Param: R_R32.Value = 250k
+**** Param: R_R41.Value = 500k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity run 8                
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .4021  (N15395)    2.2793 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5247 (N15801)    1.5265 (N15841)    2.0865 (N15867)    -.0300     
+
+(N16099)    -.9982 (N16111)    1.3983 (X_U3B.1)    -.0604                       
+
+(X_U3B.3)    -.0604                   (X_U3B.4)    -.0603                       
+
+(X_U3B.5)    4.9396                   (X_U3B.6)    -.0585                       
+
+(X_U3B.7)    -.0613                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7022                   (X_U4B.1)    -.0604                       
+
+(X_U4B.3)    -.0604                   (X_U4B.4)    -.0603                       
+
+(X_U4B.5)    4.9396                   (X_U4B.6)    -.0585                       
+
+(X_U4B.7)    -.0619                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8564                   (X_U5B.1)    -.1567                       
+
+(X_U5B.3)    -.1567                   (X_U5B.4)    -.1567                       
+
+(X_U5B.5)    4.8433                   (X_U5B.6)    -.1549                       
+
+(X_U5B.7)    -.1576                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7047                   (X_U6B.1)    -.1567                       
+
+(X_U6B.3)    -.1567                   (X_U6B.4)    -.8745                       
+
+(X_U6B.5)    4.8433                   (X_U6B.6)    -.1549                       
+
+(X_U6B.7)   17.0560                   (X_U6B.8)    1.3983                       
+
+(X_U6B.9)    1.3910                   (X_U7B.1) 98.76E-09                       
+
+(X_U7B.3) 98.76E-09                   (X_U7B.4)-17.38E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 419.3E-06                   (X_U7B.8)     .4021                       
+
+(X_U7B.9)    2.8969                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0604                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2793                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0604                      
+
+(X_U3B.28)   99.9400                  (X_U3B.34)     .8993                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0604                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2793                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0604                  (X_U4B.28)   99.9400                      
+
+(X_U4B.34)     .8993                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0054                      
+
+(X_U5B.12) -191.1600                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1567                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0865                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1567                      
+
+(X_U5B.28)   99.8430                  (X_U5B.34)     .7065                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5416                  (X_U6B.12) -191.1600                      
+
+(X_U6B.15)    1.3983                  (X_U6B.17)    -.0150                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1567                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.87E-06                      
+
+(X_U6B.23)    2.0865                  (X_U6B.25)    -.0150                      
+
+(X_U6B.26)    -.1567                  (X_U6B.28)   99.8430                      
+
+(X_U6B.34)     .7065                  (X_U6B.37)    1.4007                      
+
+(X_U6B.41)    1.4007                  (X_U7B.11)     .4020                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .4021                      
+
+(X_U7B.17)    1.5256                  (X_U7B.18)    1.5265                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5248                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5256                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .4021                  (X_U7B.41)     .4021                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.912E-06
+    V_V2         4.605E-04
+    V_V1        -4.694E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.900E-05
+    X_U4B.VIC2  -4.904E-05
+    X_U4B.VV219   2.408E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.728E-12
+    X_U6B.VV261  -8.280E-11
+    X_U6B.VV256  -2.082E-10
+    X_U6B.VV245   3.011E-12
+    X_U6B.VFI100  -4.778E-03
+    X_U6B.VIC2   2.454E-04
+    X_U6B.VV219  -4.532E-03
+    X_U6B.VV234  -4.292E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   2.012E-12
+    X_U7B.VFI100   2.205E-06
+    X_U7B.VIC2  -2.245E-06
+    X_U7B.VV219   6.279E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.396E-04
+    X_U5B.VIC2  -2.397E-04
+    X_U5B.VV219   1.717E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -4.904E-05
+    X_U3B.VIC2   4.900E-05
+    X_U3B.VV219   1.907E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.50E-03  WATTS
+
+**** Param: R_R42.Value = 500k
+**** Param: R_R52.Value = 250k
+**** Param: R_R22.Value = 1k
+**** Param: R_R21.Value = 1k
+**** Param: R_R12.Value = 10k
+**** Param: R_R31.Value = 250k
+**** Param: R_R51.Value = 250k
+**** Param: R_R11.Value = 10k
+**** Param: R_R32.Value = 255k
+**** Param: R_R41.Value = 500k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity run 9                
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .4221  (N15395)    2.2783 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5241 (N15801)    1.5259 (N15841)    2.0866 (N15867)    -.0299     
+
+(N16099)    -.9982 (N16111)    1.3983 (X_U3B.1)    -.0608                       
+
+(X_U3B.3)    -.0608                   (X_U3B.4)    -.0608                       
+
+(X_U3B.5)    4.9392                   (X_U3B.6)    -.0590                       
+
+(X_U3B.7)    -.0618                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7007                   (X_U4B.1)    -.0608                       
+
+(X_U4B.3)    -.0608                   (X_U4B.4)    -.0608                       
+
+(X_U4B.5)    4.9392                   (X_U4B.6)    -.0590                       
+
+(X_U4B.7)    -.0623                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8559                   (X_U5B.1)    -.1567                       
+
+(X_U5B.3)    -.1567                   (X_U5B.4)    -.1567                       
+
+(X_U5B.5)    4.8433                   (X_U5B.6)    -.1549                       
+
+(X_U5B.7)    -.1576                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7047                   (X_U6B.1)    -.1567                       
+
+(X_U6B.3)    -.1567                   (X_U6B.4)    -.8742                       
+
+(X_U6B.5)    4.8433                   (X_U6B.6)    -.1549                       
+
+(X_U6B.7)   17.0500                   (X_U6B.8)    1.3983                       
+
+(X_U6B.9)    1.3910                   (X_U7B.1) 98.75E-09                       
+
+(X_U7B.3) 98.75E-09                   (X_U7B.4)-18.25E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 440.2E-06                   (X_U7B.8)     .4221                       
+
+(X_U7B.9)    2.8964                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0608                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2783                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0608                      
+
+(X_U3B.28)   99.9390                  (X_U3B.34)     .8983                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0608                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2783                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0608                  (X_U4B.28)   99.9390                      
+
+(X_U4B.34)     .8983                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0054                      
+
+(X_U5B.12) -191.1600                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1567                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0866                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1567                      
+
+(X_U5B.28)   99.8430                  (X_U5B.34)     .7066                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5416                  (X_U6B.12) -191.1600                      
+
+(X_U6B.15)    1.3983                  (X_U6B.17)    -.0150                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1567                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.87E-06                      
+
+(X_U6B.23)    2.0866                  (X_U6B.25)    -.0150                      
+
+(X_U6B.26)    -.1567                  (X_U6B.28)   99.8430                      
+
+(X_U6B.34)     .7066                  (X_U6B.37)    1.4008                      
+
+(X_U6B.41)    1.4008                  (X_U7B.11)     .4220                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .4221                      
+
+(X_U7B.17)    1.5250                  (X_U7B.18)    1.5259                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5241                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5250                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .4221                  (X_U7B.41)     .4221                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.912E-06
+    V_V2         4.614E-04
+    V_V1        -4.703E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.998E-05
+    X_U4B.VIC2  -5.002E-05
+    X_U4B.VV219   2.407E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.728E-12
+    X_U6B.VV261  -8.280E-11
+    X_U6B.VV256  -2.082E-10
+    X_U6B.VV245   3.011E-12
+    X_U6B.VFI100  -4.778E-03
+    X_U6B.VIC2   2.454E-04
+    X_U6B.VV219  -4.532E-03
+    X_U6B.VV234  -4.292E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   2.032E-12
+    X_U7B.VFI100   2.163E-06
+    X_U7B.VIC2  -2.203E-06
+    X_U7B.VV219   6.079E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.396E-04
+    X_U5B.VIC2  -2.397E-04
+    X_U5B.VV219   1.717E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.002E-05
+    X_U3B.VIC2   4.998E-05
+    X_U3B.VV219   1.906E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.50E-03  WATTS
+
+**** Param: R_R42.Value = 500k
+**** Param: R_R52.Value = 250k
+**** Param: R_R22.Value = 1k
+**** Param: R_R21.Value = 1k
+**** Param: R_R12.Value = 10k
+**** Param: R_R31.Value = 250k
+**** Param: R_R51.Value = 250k
+**** Param: R_R11.Value = 10k
+**** Param: R_R32.Value = 250k
+**** Param: R_R41.Value = 510k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity run 10               
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .4303  (N15395)    2.2784 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5341 (N15801)    1.5359 (N15841)    2.0866 (N15867)    -.0299     
+
+(N16099)    -.9982 (N16111)    1.3983 (X_U3B.1)    -.0608                       
+
+(X_U3B.3)    -.0608                   (X_U3B.4)    -.0608                       
+
+(X_U3B.5)    4.9392                   (X_U3B.6)    -.0590                       
+
+(X_U3B.7)    -.0618                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7007                   (X_U4B.1)    -.0608                       
+
+(X_U4B.3)    -.0608                   (X_U4B.4)    -.0608                       
+
+(X_U4B.5)    4.9392                   (X_U4B.6)    -.0590                       
+
+(X_U4B.7)    -.0623                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8560                   (X_U5B.1)    -.1567                       
+
+(X_U5B.3)    -.1567                   (X_U5B.4)    -.1567                       
+
+(X_U5B.5)    4.8433                   (X_U5B.6)    -.1549                       
+
+(X_U5B.7)    -.1576                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7047                   (X_U6B.1)    -.1567                       
+
+(X_U6B.3)    -.1567                   (X_U6B.4)    -.8743                       
+
+(X_U6B.5)    4.8433                   (X_U6B.6)    -.1549                       
+
+(X_U6B.7)   17.0510                   (X_U6B.8)    1.3983                       
+
+(X_U6B.9)    1.3910                   (X_U7B.1) 98.75E-09                       
+
+(X_U7B.3) 98.75E-09                   (X_U7B.4)-18.61E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 448.7E-06                   (X_U7B.8)     .4303                       
+
+(X_U7B.9)    2.8964                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0608                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2784                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0608                      
+
+(X_U3B.28)   99.9390                  (X_U3B.34)     .8984                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0608                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2784                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0608                  (X_U4B.28)   99.9390                      
+
+(X_U4B.34)     .8984                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0054                      
+
+(X_U5B.12) -191.1600                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1567                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0866                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1567                      
+
+(X_U5B.28)   99.8430                  (X_U5B.34)     .7066                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5416                  (X_U6B.12) -191.1600                      
+
+(X_U6B.15)    1.3983                  (X_U6B.17)    -.0150                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1567                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.87E-06                      
+
+(X_U6B.23)    2.0866                  (X_U6B.25)    -.0150                      
+
+(X_U6B.26)    -.1567                  (X_U6B.28)   99.8430                      
+
+(X_U6B.34)     .7066                  (X_U6B.37)    1.4007                      
+
+(X_U6B.41)    1.4007                  (X_U7B.11)     .4302                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .4303                      
+
+(X_U7B.17)    1.5350                  (X_U7B.18)    1.5359                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5342                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5350                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .4302                  (X_U7B.41)     .4302                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.912E-06
+    V_V2         4.614E-04
+    V_V1        -4.703E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.998E-05
+    X_U4B.VIC2  -5.002E-05
+    X_U4B.VV219   2.407E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.728E-12
+    X_U6B.VV261  -8.280E-11
+    X_U6B.VV256  -2.082E-10
+    X_U6B.VV245   3.011E-12
+    X_U6B.VFI100  -4.778E-03
+    X_U6B.VIC2   2.454E-04
+    X_U6B.VV219  -4.532E-03
+    X_U6B.VV234  -4.292E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   2.040E-12
+    X_U7B.VFI100   2.167E-06
+    X_U7B.VIC2  -2.207E-06
+    X_U7B.VV219   5.998E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.396E-04
+    X_U5B.VIC2  -2.397E-04
+    X_U5B.VV219   1.717E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.002E-05
+    X_U3B.VIC2   4.998E-05
+    X_U3B.VV219   1.906E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.50E-03  WATTS
+
+**** Param: R_R42.Value = 525k
+**** Param: R_R52.Value = 237.50000000000000k
+**** Param: R_R22.Value = 950
+**** Param: R_R21.Value = 1.05000000000000k
+**** Param: R_R12.Value = 10.50000000000000k
+**** Param: R_R31.Value = 262.50000000000000k
+**** Param: R_R51.Value = 262.50000000000000k
+**** Param: R_R11.Value = 9.50000000000000k
+**** Param: R_R32.Value = 237.50000000000000k
+**** Param: R_R41.Value = 475k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity minimum run 1        
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .0341  (N15395)    2.2696 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.4670 (N15801)    1.4688 (N15841)    2.1158 (N15867)     .0018     
+
+(N16099)    -.9982 (N16111)    1.3585 (X_U3B.1)    -.0652                       
+
+(X_U3B.3)    -.0652                   (X_U3B.4)    -.0652                       
+
+(X_U3B.5)    4.9348                   (X_U3B.6)    -.0634                       
+
+(X_U3B.7)    -.0662                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.6906                   (X_U4B.1)    -.0652                       
+
+(X_U4B.3)    -.0652                   (X_U4B.4)    -.0652                       
+
+(X_U4B.5)    4.9348                   (X_U4B.6)    -.0634                       
+
+(X_U4B.7)    -.0667                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8485                   (X_U5B.1)    -.1421                       
+
+(X_U5B.3)    -.1421                   (X_U5B.4)    -.1421                       
+
+(X_U5B.5)    4.8579                   (X_U5B.6)    -.1402                       
+
+(X_U5B.7)    -.1430                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7322                   (X_U6B.1)    -.1421                       
+
+(X_U6B.3)    -.1421                   (X_U6B.4)    -.1422                       
+
+(X_U6B.5)    4.8579                   (X_U6B.6)    -.1402                       
+
+(X_U6B.7)    -.1405                   (X_U6B.8)    1.3585                       
+
+(X_U6B.9)    1.4765                   (X_U7B.1) 98.94E-09                       
+
+(X_U7B.3) 98.94E-09                   (X_U7B.4)-1.374E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 35.41E-06                   (X_U7B.8)     .0341                       
+
+(X_U7B.9)    2.9021                   (X_U3B.11)    -.9966                      
+
+(X_U3B.12) -191.0700                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0652                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2696                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0652                      
+
+(X_U3B.28)   99.9350                  (X_U3B.34)     .8896                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4998                  (X_U4B.12) -191.0700                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0652                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2696                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0652                  (X_U4B.28)   99.9350                      
+
+(X_U4B.34)     .8896                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0049                      
+
+(X_U5B.12) -191.1400                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1421                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.1158                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1421                      
+
+(X_U5B.28)   99.8580                  (X_U5B.34)     .7358                      
+
+(X_U5B.37)   -1.0004                  (X_U5B.41)   -1.0004                      
+
+(X_U6B.11)    1.3748                  (X_U6B.12) -191.1400                      
+
+(X_U6B.15)    1.3585                  (X_U6B.17) 889.6E-06                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1421                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 45.16E-06                      
+
+(X_U6B.23)    2.1158                  (X_U6B.25) 889.6E-06                      
+
+(X_U6B.26)    -.1421                  (X_U6B.28)   99.8580                      
+
+(X_U6B.34)     .7358                  (X_U6B.37)    1.3608                      
+
+(X_U6B.41)    1.3608                  (X_U7B.11)     .0340                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .0341                      
+
+(X_U7B.17)    1.4679                  (X_U7B.18)    1.4688                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.4671                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.4679                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .0341                  (X_U7B.41)     .0341                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.753E-06
+    V_V2         4.497E-04
+    V_V1        -4.586E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   5.261E-05
+    X_U4B.VIC2  -5.265E-05
+    X_U4B.VV219   2.398E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.010E-12
+    X_U6B.VV261  -1.000E-10
+    X_U6B.VV256  -1.910E-10
+    X_U6B.VV245   2.971E-12
+    X_U6B.VFI100  -5.427E-04
+    X_U6B.VIC2   2.302E-04
+    X_U6B.VV219  -3.125E-04
+    X_U6B.VV234  -5.010E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   1.644E-12
+    X_U7B.VFI100   2.692E-06
+    X_U7B.VIC2  -2.732E-06
+    X_U7B.VV219   9.959E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.096E-13
+    X_U5B.VFI100   2.244E-04
+    X_U5B.VIC2  -2.245E-04
+    X_U5B.VV219   1.746E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.265E-05
+    X_U3B.VIC2   5.261E-05
+    X_U3B.VV219   1.897E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   2.62E-03  WATTS
+
+**** Param: R_R42.Value = 475k
+**** Param: R_R52.Value = 262.50000000000000k
+**** Param: R_R22.Value = 1.05000000000000k
+**** Param: R_R21.Value = 950
+**** Param: R_R12.Value = 9.50000000000000k
+**** Param: R_R31.Value = 237.50000000000000k
+**** Param: R_R51.Value = 237.50000000000000k
+**** Param: R_R11.Value = 10.50000000000000k
+**** Param: R_R32.Value = 262.50000000000000k
+**** Param: R_R41.Value = 525k
+
+**** Command: doALL
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     Sensitivity maximum run 1        
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .7084  (N15395)    2.2866 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5795 (N15801)    1.5812 (N15841)    2.0613 (N15867)    -.0818     
+
+(N16099)    -.9982 (N16111)    1.3736 (X_U3B.1)    -.0567                       
+
+(X_U3B.3)    -.0567                   (X_U3B.4)    -.0567                       
+
+(X_U3B.5)    4.9433                   (X_U3B.6)    -.0548                       
+
+(X_U3B.7)    -.0577                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7102                   (X_U4B.1)    -.0567                       
+
+(X_U4B.3)    -.0567                   (X_U4B.4)    -.0566                       
+
+(X_U4B.5)    4.9433                   (X_U4B.6)    -.0548                       
+
+(X_U4B.7)    -.0582                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8629                   (X_U5B.1)    -.1693                       
+
+(X_U5B.3)    -.1693                   (X_U5B.4)    -.1693                       
+
+(X_U5B.5)    4.8307                   (X_U5B.6)    -.1675                       
+
+(X_U5B.7)    -.1702                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.6805                   (X_U6B.1)    -.1693                       
+
+(X_U6B.3)    -.1693                   (X_U6B.4)   -2.0603                       
+
+(X_U6B.5)    4.8307                   (X_U6B.6)    -.1675                       
+
+(X_U6B.7)   45.1770                   (X_U6B.8)    1.3736                       
+
+(X_U6B.9)    1.3651                   (X_U7B.1) 98.58E-09                       
+
+(X_U7B.3) 98.58E-09                   (X_U7B.4)-30.71E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 738.9E-06                   (X_U7B.8)     .7084                       
+
+(X_U7B.9)    2.8915                   (X_U3B.11)    -.9968                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0567                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2866                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0567                      
+
+(X_U3B.28)   99.9430                  (X_U3B.34)     .9066                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4996                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0567                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2866                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0567                  (X_U4B.28)   99.9430                      
+
+(X_U4B.34)     .9066                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0057                      
+
+(X_U5B.12) -191.1700                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1693                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0613                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1693                      
+
+(X_U5B.28)   99.8310                  (X_U5B.34)     .6813                      
+
+(X_U5B.37)   -1.0007                  (X_U5B.41)   -1.0007                      
+
+(X_U6B.11)    1.5206                  (X_U6B.12) -191.1700                      
+
+(X_U6B.15)    1.3736                  (X_U6B.17)    -.0409                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1693                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.61E-06                      
+
+(X_U6B.23)    2.0613                  (X_U6B.25)    -.0409                      
+
+(X_U6B.26)    -.1693                  (X_U6B.28)   99.8310                      
+
+(X_U6B.34)     .6813                  (X_U6B.37)    1.3762                      
+
+(X_U6B.41)    1.3762                  (X_U7B.11)     .7083                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .7084                      
+
+(X_U7B.17)    1.5804                  (X_U7B.18)    1.5813                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5795                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5804                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .7084                  (X_U7B.41)     .7084                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         6.003E-06
+    V_V2         4.684E-04
+    V_V1        -4.771E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.760E-05
+    X_U4B.VIC2  -4.764E-05
+    X_U4B.VV219   2.415E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -6.901E-12
+    X_U6B.VV261  -5.466E-11
+    X_U6B.VV256  -2.364E-10
+    X_U6B.VV245   2.986E-12
+    X_U6B.VFI100  -4.901E-03
+    X_U6B.VIC2   2.552E-04
+    X_U6B.VV219  -4.645E-03
+    X_U6B.VV234  -3.119E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   2.318E-12
+    X_U7B.VFI100   1.791E-06
+    X_U7B.VIC2  -1.831E-06
+    X_U7B.VV219   3.216E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.093E-13
+    X_U5B.VFI100   2.496E-04
+    X_U5B.VIC2  -2.497E-04
+    X_U5B.VV219   1.692E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -4.764E-05
+    X_U3B.VIC2   4.760E-05
+    X_U3B.VV219   1.914E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.69E-03  WATTS
+
+
+**** Command: FINISH
+
+**** 06/16/25 12:58:58 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-PSpiceFiles\SCHEMATIC1\mlt.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        1.02
+

@@ -1,0 +1,237 @@
+Starting advanced analysis session
+*****************************************
+
+******* Analysis Started On:Mon Jun 16 12:58:58 2025
+
+Advance Analyses Project File Name : f:/simran_intern/orcade/multiplier_ramp-PSpiceFiles/SCHEMATIC1/SCHEMATIC1.$ap
+
+
+Processing analysis specifications
+
+Listing Profiles:
+ - mlt.sim
+
+
+Simulation Run: 0 (Nominal Run)
+Param : R42.VALUE  (R_R42.Value) = 500k
+Param : R52.VALUE  (R_R52.Value) = 250k
+Param : R22.VALUE  (R_R22.Value) = 1k
+Param : R21.VALUE  (R_R21.Value) = 1k
+Param : R12.VALUE  (R_R12.Value) = 10k
+Param : R31.VALUE  (R_R31.Value) = 250k
+Param : R51.VALUE  (R_R51.Value) = 250k
+Param : R11.VALUE  (R_R11.Value) = 10k
+Param : R32.VALUE  (R_R32.Value) = 250k
+Param : R41.VALUE  (R_R41.Value) = 500k
+
+Specs : Max(V(Vout)) = 408.66713117301339m
+Nominal run completed
+Sensitivity runs underway.....
+
+
+Simulation Run: 1
+Param : R42.VALUE  (R_R42.Value) = 510k
+Param : R52.VALUE  (R_R52.Value) = 250k
+Param : R22.VALUE  (R_R22.Value) = 1k
+Param : R21.VALUE  (R_R21.Value) = 1k
+Param : R12.VALUE  (R_R12.Value) = 10k
+Param : R31.VALUE  (R_R31.Value) = 250k
+Param : R51.VALUE  (R_R51.Value) = 250k
+Param : R11.VALUE  (R_R11.Value) = 10k
+Param : R32.VALUE  (R_R32.Value) = 250k
+Param : R41.VALUE  (R_R41.Value) = 500k
+
+Specs : Max(V(Vout)) = 386.63205820854301m
+Sensitivity run: 1 of 10 completed
+
+
+Simulation Run: 2
+Param : R42.VALUE  (R_R42.Value) = 500k
+Param : R52.VALUE  (R_R52.Value) = 255k
+Param : R22.VALUE  (R_R22.Value) = 1k
+Param : R21.VALUE  (R_R21.Value) = 1k
+Param : R12.VALUE  (R_R12.Value) = 10k
+Param : R31.VALUE  (R_R31.Value) = 250k
+Param : R51.VALUE  (R_R51.Value) = 250k
+Param : R11.VALUE  (R_R11.Value) = 10k
+Param : R32.VALUE  (R_R32.Value) = 250k
+Param : R41.VALUE  (R_R41.Value) = 500k
+
+Specs : Max(V(Vout)) = 414.88872698916066m
+Sensitivity run: 2 of 10 completed
+
+
+Simulation Run: 3
+Param : R42.VALUE  (R_R42.Value) = 500k
+Param : R52.VALUE  (R_R52.Value) = 250k
+Param : R22.VALUE  (R_R22.Value) = 1.02000000000000k
+Param : R21.VALUE  (R_R21.Value) = 1k
+Param : R12.VALUE  (R_R12.Value) = 10k
+Param : R31.VALUE  (R_R31.Value) = 250k
+Param : R51.VALUE  (R_R51.Value) = 250k
+Param : R11.VALUE  (R_R11.Value) = 10k
+Param : R32.VALUE  (R_R32.Value) = 250k
+Param : R41.VALUE  (R_R41.Value) = 500k
+
+Specs : Max(V(Vout)) = 421.70538183511036m
+Sensitivity run: 3 of 10 completed
+
+
+Simulation Run: 4
+Param : R42.VALUE  (R_R42.Value) = 500k
+Param : R52.VALUE  (R_R52.Value) = 250k
+Param : R22.VALUE  (R_R22.Value) = 1k
+Param : R21.VALUE  (R_R21.Value) = 1.02000000000000k
+Param : R12.VALUE  (R_R12.Value) = 10k
+Param : R31.VALUE  (R_R31.Value) = 250k
+Param : R51.VALUE  (R_R51.Value) = 250k
+Param : R11.VALUE  (R_R11.Value) = 10k
+Param : R32.VALUE  (R_R32.Value) = 250k
+Param : R41.VALUE  (R_R41.Value) = 500k
+
+Specs : Max(V(Vout)) = 403.58258336631127m
+Sensitivity run: 4 of 10 completed
+
+
+Simulation Run: 5
+Param : R42.VALUE  (R_R42.Value) = 500k
+Param : R52.VALUE  (R_R52.Value) = 250k
+Param : R22.VALUE  (R_R22.Value) = 1k
+Param : R21.VALUE  (R_R21.Value) = 1k
+Param : R12.VALUE  (R_R12.Value) = 10.20000000000000k
+Param : R31.VALUE  (R_R31.Value) = 250k
+Param : R51.VALUE  (R_R51.Value) = 250k
+Param : R11.VALUE  (R_R11.Value) = 10k
+Param : R32.VALUE  (R_R32.Value) = 250k
+Param : R41.VALUE  (R_R41.Value) = 500k
+
+Specs : Max(V(Vout)) = 399.52698755253817m
+Sensitivity run: 5 of 10 completed
+
+
+Simulation Run: 6
+Param : R42.VALUE  (R_R42.Value) = 500k
+Param : R52.VALUE  (R_R52.Value) = 250k
+Param : R22.VALUE  (R_R22.Value) = 1k
+Param : R21.VALUE  (R_R21.Value) = 1k
+Param : R12.VALUE  (R_R12.Value) = 10k
+Param : R31.VALUE  (R_R31.Value) = 255k
+Param : R51.VALUE  (R_R51.Value) = 250k
+Param : R11.VALUE  (R_R11.Value) = 10k
+Param : R32.VALUE  (R_R32.Value) = 250k
+Param : R41.VALUE  (R_R41.Value) = 500k
+
+Specs : Max(V(Vout)) = 378.83824699438969m
+Sensitivity run: 6 of 10 completed
+
+
+Simulation Run: 7
+Param : R42.VALUE  (R_R42.Value) = 500k
+Param : R52.VALUE  (R_R52.Value) = 250k
+Param : R22.VALUE  (R_R22.Value) = 1k
+Param : R21.VALUE  (R_R21.Value) = 1k
+Param : R12.VALUE  (R_R12.Value) = 10k
+Param : R31.VALUE  (R_R31.Value) = 250k
+Param : R51.VALUE  (R_R51.Value) = 255k
+Param : R11.VALUE  (R_R11.Value) = 10k
+Param : R32.VALUE  (R_R32.Value) = 250k
+Param : R41.VALUE  (R_R41.Value) = 500k
+
+Specs : Max(V(Vout)) = 403.46729029204499m
+Sensitivity run: 7 of 10 completed
+
+
+Simulation Run: 8
+Param : R42.VALUE  (R_R42.Value) = 500k
+Param : R52.VALUE  (R_R52.Value) = 250k
+Param : R22.VALUE  (R_R22.Value) = 1k
+Param : R21.VALUE  (R_R21.Value) = 1k
+Param : R12.VALUE  (R_R12.Value) = 10k
+Param : R31.VALUE  (R_R31.Value) = 250k
+Param : R51.VALUE  (R_R51.Value) = 250k
+Param : R11.VALUE  (R_R11.Value) = 10.20000000000000k
+Param : R32.VALUE  (R_R32.Value) = 250k
+Param : R41.VALUE  (R_R41.Value) = 500k
+
+Specs : Max(V(Vout)) = 410.64667336760431m
+Sensitivity run: 8 of 10 completed
+
+
+Simulation Run: 9
+Param : R42.VALUE  (R_R42.Value) = 500k
+Param : R52.VALUE  (R_R52.Value) = 250k
+Param : R22.VALUE  (R_R22.Value) = 1k
+Param : R21.VALUE  (R_R21.Value) = 1k
+Param : R12.VALUE  (R_R12.Value) = 10k
+Param : R31.VALUE  (R_R31.Value) = 250k
+Param : R51.VALUE  (R_R51.Value) = 250k
+Param : R11.VALUE  (R_R11.Value) = 10k
+Param : R32.VALUE  (R_R32.Value) = 255k
+Param : R41.VALUE  (R_R41.Value) = 500k
+
+Specs : Max(V(Vout)) = 430.46727858911521m
+Sensitivity run: 9 of 10 completed
+
+
+Simulation Run: 10
+Param : R42.VALUE  (R_R42.Value) = 500k
+Param : R52.VALUE  (R_R52.Value) = 250k
+Param : R22.VALUE  (R_R22.Value) = 1k
+Param : R21.VALUE  (R_R21.Value) = 1k
+Param : R12.VALUE  (R_R12.Value) = 10k
+Param : R31.VALUE  (R_R31.Value) = 250k
+Param : R51.VALUE  (R_R51.Value) = 250k
+Param : R11.VALUE  (R_R11.Value) = 10k
+Param : R32.VALUE  (R_R32.Value) = 250k
+Param : R41.VALUE  (R_R41.Value) = 510k
+
+Specs : Max(V(Vout)) = 438.48017698186084m
+Sensitivity run: 10 of 10 completed
+Sensitivity runs completed
+Sensitivity bar lengths computed
+Worstcase runs underway.....
+
+
+Simulation Run: 11
+Param : R42.VALUE  (R_R42.Value) = 525k
+Param : R52.VALUE  (R_R52.Value) = 237.50000000000000k
+Param : R22.VALUE  (R_R22.Value) = 950
+Param : R21.VALUE  (R_R21.Value) = 1.05000000000000k
+Param : R12.VALUE  (R_R12.Value) = 10.50000000000000k
+Param : R31.VALUE  (R_R31.Value) = 262.50000000000000k
+Param : R51.VALUE  (R_R51.Value) = 262.50000000000000k
+Param : R11.VALUE  (R_R11.Value) = 9.50000000000000k
+Param : R32.VALUE  (R_R32.Value) = 237.50000000000000k
+Param : R41.VALUE  (R_R41.Value) = 475k
+
+Specs : Max(V(Vout)) = 34.12163341766485m
+Minimum run: 1 of 1 completed
+Sensitivity minimum runs completed
+
+
+Simulation Run: 12
+Param : R42.VALUE  (R_R42.Value) = 475k
+Param : R52.VALUE  (R_R52.Value) = 262.50000000000000k
+Param : R22.VALUE  (R_R22.Value) = 1.05000000000000k
+Param : R21.VALUE  (R_R21.Value) = 950
+Param : R12.VALUE  (R_R12.Value) = 9.50000000000000k
+Param : R31.VALUE  (R_R31.Value) = 237.50000000000000k
+Param : R51.VALUE  (R_R51.Value) = 237.50000000000000k
+Param : R11.VALUE  (R_R11.Value) = 10.50000000000000k
+Param : R32.VALUE  (R_R32.Value) = 262.50000000000000k
+Param : R41.VALUE  (R_R41.Value) = 525k
+
+Specs : Max(V(Vout)) = 753.71822480327921m
+Maximum run: 1 of 1 completed
+Sensitivity maximum runs completed
+-------------------- Sensitivity analysis completed --------------------
+Mon Jun 16 12:58:59 2025
+
+Analysis complete
+
+******* Analysis stopped at:Mon Jun 16 12:58:59 2025
+
+Analysis time: 00:00:01
+
+
+End of advanced analysis session

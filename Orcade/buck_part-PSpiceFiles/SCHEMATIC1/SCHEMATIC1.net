@@ -1,0 +1,24 @@
+* source BUCK_PART
+C_Chf         N00381 VCONTROL C_Chf 30p  TC=0,0 
+.model        C_Chf CAP C=1     DEV 5%/5% TC1=0 TC2=0 VC1=0 VC2=0
+C_Ccomp         N00405 VCONTROL C_Ccomp 2n  TC=0,0 
+.model        C_Ccomp CAP C=1     DEV 5%/5% TC1=0 TC2=0 VC1=0 VC2=0
+R_Rcomp1         N00381 VCONTROL R_Rcomp1 10e6 TC=0,0 
+.model        R_Rcomp1 RES R=1     DEV 5%/5% TC1=0 TC2=0
+R_Rcomp         N00381 N00405 R_Rcomp 80k TC=0,0 
+.model        R_Rcomp RES R=1     DEV 5%/5% TC1=0 TC2=0
+R_R1         N00476 N00381 R_R1 1k TC=0,0 
+.model        R_R1 RES R=1     DEV 5%/5% TC1=0 TC2=0
+R_Rf1         N00476 VBUCK R_Rf1 9.76k TC=0,0 
+.model        R_Rf1 RES R=1     DEV 5%/5% TC1=0 TC2=0
+R_Rf2         0 N00476 R_Rf2 3.25k TC=0,0 
+.model        R_Rf2 RES R=1     DEV 5%/5% TC1=0 TC2=0
+X_U1A         VREF N00381 N00618 N00606 VCONTROL LM324
+V_V2         VREF 0  
++PULSE 0 2.5 0 4m 2m 1 2
+V_V3         N00618 0 12
+V_V4         0 N00606 12
+V_V5         VBUCK 0   PWL   
++ REPEAT FOREVER 
++ FILE "F:\Swati\Result\buck\first_input_for_buckpart.txt" 
++ ENDREPEAT

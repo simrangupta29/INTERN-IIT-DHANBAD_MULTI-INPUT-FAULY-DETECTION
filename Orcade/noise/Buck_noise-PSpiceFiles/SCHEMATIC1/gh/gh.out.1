@@ -1,0 +1,242 @@
+
+**** 06/27/25 13:07:47 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-gh"  [ F:\SIMRAN_INTERN\Orcade\noise\buck_noise-pspicefiles\schematic1\gh.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "gh.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1.5ms 0 0.530u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source BUCK_NOISE
+R_Rcomp         N06540 N06752  80k TC=0,0 
+V_V5         VBUCK 0   PWL   
++ REPEAT FOREVER 
++ FILE "F:\Swati\Result\buck\input_buck_noise.txt" 
++ ENDREPEAT
+V_V3         N06976 0 12
+R_Rcomp1         N06540 VCONTROL  10e6 TC=0,0 
+R_Rf1         N06664 VBUCK  8.9304k TC=0,0 
+C_Chf         N06540 VCONTROL  30p  TC=0,0 
+C_Ccomp         N06752 VCONTROL  2n  TC=0,0 
+X_U1A         VREF N06540 N06976 N06804 VCONTROL LM324
+R_Rf2         0 N06664  3.25k TC=0,0 
+R_R1         N06664 N06540  1k TC=0,0 
+V_V4         0 N06804 12
+X_V6         VREF 0 VPULSEN PARAMS: V1=0 V2=2.5 TD=0 TR=4m TF=2m PW=1 PER=2
++  NVAL=0.15m
+
+**** RESUMING gh.cir ****
+.END
+
+**** 06/27/25 13:07:47 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-gh"  [ F:\SIMRAN_INTERN\Orcade\noise\buck_noise-pspicefiles\schematic1\gh.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.dx        X_U1A.dy        
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 06/27/25 13:07:47 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-gh"  [ F:\SIMRAN_INTERN\Orcade\noise\buck_noise-pspicefiles\schematic1\gh.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.qx        
+               PNP             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 06/27/25 13:07:47 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-gh"  [ F:\SIMRAN_INTERN\Orcade\noise\buck_noise-pspicefiles\schematic1\gh.sim ] 
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.sw2       X_U1A.sw1       X_U1A.sw3       X_U1A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+**** 06/27/25 13:07:47 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-gh"  [ F:\SIMRAN_INTERN\Orcade\noise\buck_noise-pspicefiles\schematic1\gh.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VREF) 74.83E-06  (VBUCK) 382.2E-06  (N06540)-107.0E-06 (N06664)-45.23E-06     
+
+(N06752)-107.0E-06 (N06804)  -12.0000 (N06976)   12.0000 (X_V6.M)    0.0000     
+
+(X_U1A.6) 201.2E-06                   (X_U1A.7)   -1.0674                       
+
+(X_U1A.8)   -1.0674                   (X_U1A.9)    0.0000                       
+
+(X_U1A.a)   12.0000                   (X_U1A.b)-3.160E-06                       
+
+(VCONTROL)   -1.0673                  (X_U1A.10)     .6077                      
+
+(X_U1A.11)  -11.9600                  (X_U1A.12)  -11.9600                      
+
+(X_U1A.13)     .5937                  (X_U1A.14)     .5938                      
+
+(X_U1A.53)   10.5000                  (X_U1A.54)  -11.1780                      
+
+(X_U1A.90)-106.7E-06                  (X_U1A.91)   40.0000                      
+
+(X_U1A.92)  -40.0000                  (X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V5        -4.786E-08
+    V_V3        -2.660E-03
+    V_V4        -2.660E-03
+    X_U1A.vb     2.012E-09
+    X_U1A.vc     1.157E-11
+    X_U1A.ve     1.164E-11
+    X_U1A.vlim  -1.067E-07
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+    X_V6.VPULSE   4.474E-08
+
+    TOTAL POWER DISSIPATION   6.38E-02  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  1.095E-03.
+         Time step =  867.4E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U1A.90)               =   -14.96mV  \   -14.94mV
+
+  These supply currents failed to converge:
+
+    I(X_U1A.egnd)             =    15.05uA  \    15.03uA
+    I(X_V6.E1)                =    44.47nA  \    44.40nA
+    I(X_U1A.vb)               =    7.967nA  \    7.977nA
+    I(X_U1A.vc)               =   -20.77nA  \    91.58nA
+    I(X_U1A.ve)               =    21.25nA  \   -91.16nA
+    I(X_U1A.vlim)             =   -14.96uA  \   -14.94uA
+    I(X_V6.VPULSE)            =    44.47nA  \    44.40nA
+
+  These devices failed to converge:
+    X_U1A.dc  X_U1A.de  
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VREF)     .6843  (VBUCK)    2.7524  (N06540)     .6840 (N06664)     .6989     
+
+(N06752)    -.4743 (N06804)  -12.0000 (N06976)   12.0000 (X_V6.M)     .6844     
+
+(X_U1A.6) 796.7E-06                   (X_U1A.7)   -4.2270                       
+
+(X_U1A.8)   -4.2270                   (X_U1A.9)    0.0000                       
+
+(X_U1A.a) 16.16E-06                   (X_U1A.b)  -12.0000                       
+
+(VCONTROL)   -4.2262                  (X_U1A.10)    1.2917                      
+
+(X_U1A.11)  -11.9600                  (X_U1A.12)  -11.9610                      
+
+(X_U1A.13)    1.2778                  (X_U1A.14)    1.2779                      
+
+(X_U1A.53)   10.5000                  (X_U1A.54)  -11.1780                      
+
+(X_U1A.90)    -.0150                  (X_U1A.91)   40.0000                      
+
+(X_U1A.92)  -40.0000                  (X_U1A.99)    0.0000                  
+
+
+**** Interrupt ****

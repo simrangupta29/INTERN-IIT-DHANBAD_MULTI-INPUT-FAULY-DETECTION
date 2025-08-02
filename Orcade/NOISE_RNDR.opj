@@ -1,0 +1,51 @@
+(ExpressProject "NOISE_RNDR"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "24.1 S004 (4290201)  [4/17/2025]-[06/19/25]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\noise_rndr.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\noise_rndr-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\noise_rndr-pspicefiles\schematic1\noise_trans.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\noise_rndr-pspicefiles\schematic1\noise_trans.sim"
+        (DisplayName "SCHEMATIC1-NOISE_TRANS")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "F:\SIMRAN_INTERN\Orcade\noise_rndr.dsn")
+      (Path "Design Resources" "F:\SIMRAN_INTERN\Orcade\noise_rndr.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources" "F:\SIMRAN_INTERN\Orcade\noise_rndr.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 724"))
+      (Tab 0)))
+  (MPSSessionName "Rahul Bhattacharya"))

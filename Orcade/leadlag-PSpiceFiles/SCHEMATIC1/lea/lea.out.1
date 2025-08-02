@@ -1,0 +1,213 @@
+
+**** 06/30/25 10:56:04 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lea"  [ f:\swati\orcad_projects\leadlag-pspicefiles\schematic1\lea.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "lea.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 110ms 0 50us 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LEADLAG
+X_U1         N00326 N00266 V+ V- VOUT uA741
+R_R1         VN N00266 R_R1 1k TC=0,0 
+.model        R_R1 RES R=1     DEV 5%/5% TC1=0 TC2=0
+R_R2         VP N00326 R_R2 10k TC=0,0 
+.model        R_R2 RES R=1     DEV 5%/5% TC1=0 TC2=0
+R_R3         N00266 VOUT R_R3 10k TC=0,0 
+.model        R_R3 RES R=1     DEV 5%/5% TC1=0 TC2=0
+C_C1         N00266 VOUT C_C1 0.1595u  TC=0,0 
+.model        C_C1 CAP C=1     DEV 5%/5% TC1=0 TC2=0 VC1=0 VC2=0
+C_C2         0 N00326 C_C2 1.595u  TC=0,0 
+.model        C_C2 CAP C=1     DEV 5%/5% TC1=0 TC2=0 VC1=0 VC2=0
+V_V1         V+ 0 12
+V_V2         V- 0 -12
+V_V3         VN 0  
++SIN 0 0.2 100 0 0 0
+V_V4         VP 0  
++SIN 0 0.4 10 0 0 0
+
+**** RESUMING lea.cir ****
+.END
+
+**** 06/30/25 10:56:04 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lea"  [ f:\swati\orcad_projects\leadlag-pspicefiles\schematic1\lea.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 06/30/25 10:56:04 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lea"  [ f:\swati\orcad_projects\leadlag-pspicefiles\schematic1\lea.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 06/30/25 10:56:04 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lea"  [ f:\swati\orcad_projects\leadlag-pspicefiles\schematic1\lea.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            R_R2            R_R3            
+           R    1               1               1            
+
+
+**** 06/30/25 10:56:04 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lea"  [ f:\swati\orcad_projects\leadlag-pspicefiles\schematic1\lea.sim ] 
+
+
+ ****     Capacitor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               C_C1            C_C2            
+           C    1               1            
+
+
+**** 06/30/25 10:56:04 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lea"  [ f:\swati\orcad_projects\leadlag-pspicefiles\schematic1\lea.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (   VN)    0.0000  (   VP)    0.0000      
+
+( VOUT)    -.0078  (N00266)-777.9E-06 (N00326)-797.3E-06 (X_U1.6) 741.0E-09     
+
+(X_U1.7)    -.0078 (X_U1.8)    -.0078 (X_U1.9)    0.0000 (X_U1.10)    -.6085    
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5946                   (X_U1.14)    -.5946                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)-698.2E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.337E-03
+    V_V2         1.337E-03
+    V_V3        -7.779E-07
+    V_V4        -7.973E-08
+    X_U1.vb      7.410E-12
+    X_U1.vc      1.101E-11
+    X_U1.ve      1.250E-11
+    X_U1.vlim   -6.982E-07
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/30/25 10:56:04 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lea"  [ f:\swati\orcad_projects\leadlag-pspicefiles\schematic1\lea.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+

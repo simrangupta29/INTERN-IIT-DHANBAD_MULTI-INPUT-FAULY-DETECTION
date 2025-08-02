@@ -1,0 +1,5 @@
+* source NOISE_RNDC
+V_V17         V 0 1V
+R_R63         0 VOUT  1k TC=0,0 
+E_E3         VOUT V VALUE { (RNDC-0.5)/5 }
+.PARAM  sweep=1

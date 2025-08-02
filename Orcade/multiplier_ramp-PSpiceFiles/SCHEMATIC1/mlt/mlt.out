@@ -1,0 +1,388 @@
+
+**** 06/17/25 18:41:34 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-pspicefiles\schematic1\mlt.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "mlt.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 50u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MULTIPLIER_RAMP
+V_V8         VX 0  
++PULSE -1 1 0 10m 0 0 10m
+V_V9         VY 0  
++PULSE -1.5 1.5 0 10m 0 0 10m
+R_R42         N15801 VOUT R_R42 500k TC=0,0 
+.model        R_R42 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R52         N16111 N15867 R_R52 245k TC=0,0 
+.model        R_R52 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R22         N15841 VDD R_R22 1k TC=0,0 
+.model        R_R22 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R21         N15395 VDD R_R21 1k TC=0,0 
+.model        R_R21 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+X_U4B         VY N15557 N15557 N15395 VSS awbmc33172
+V_V2         VSS 0 -2.4
+R_R12         N16099 N16111 R_R12 10k TC=0,0 
+.model        R_R12 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+X_U6B         0 N15867 N16111 N15841 VSS awbmc33172
+X_U7B         N15605 N15801 VOUT VDD VSS awbmc33172
+R_R31         N15395 N15605 R_R31 250k TC=0,0 
+.model        R_R31 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R51         N15867 VY R_R51 250k TC=0,0 
+.model        R_R51 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R11         N15545 N15557 R_R11 10k TC=0,0 
+.model        R_R11 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+X_U5B         VX N16099 N16099 N15841 VSS awbmc33172
+V_V1         VDD 0 2.4
+R_R32         N15841 N15801 R_R32 250k TC=0,0 
+.model        R_R32 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R41         N15605 0 R_R41 500k TC=0,0 
+.model        R_R41 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+X_U3B         VX N15545 N15545 N15395 VSS awbmc33172
+
+**** RESUMING mlt.cir ****
+.END
+
+**** 06/17/25 18:41:34 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-pspicefiles\schematic1\mlt.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U4B.M1M33174_D4               X_U4B.M2MID     X_U4B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U4B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U6B.M1M33174_D4               X_U6B.M2MID     X_U6B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U6B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U7B.M1M33174_D4               X_U7B.M2MID     X_U7B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U7B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U5B.M1M33174_D4               X_U5B.M2MID     X_U5B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U5B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+               X_U3B.M1M33174_D4               X_U3B.M2MID     X_U3B.M3MMID    
+          IS   10.000000E-15                   10.000000E-15   10.000000E-15 
+           N     .7812                                                       
+          EG     .1                                              .1          
+         XTI    0                                                            
+
+
+               X_U3B.M4M33174_DP 
+          IS   10.000000E-15 
+           N     .147        
+          EG     .1          
+         XTI    0            
+
+
+**** 06/17/25 18:41:34 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-pspicefiles\schematic1\mlt.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R42           R_R52           R_R22           R_R21           
+           R    1               1               1               1            
+
+
+               R_R12           R_R31           R_R51           R_R11           
+           R    1               1               1               1            
+
+
+               R_R32           R_R41           
+           R    1               1            
+
+
+WARNING(ORPSIM-15459): In device V_V8, default values (TF=1.00e-09) are used for zero TR and TF. Use the DEFTR and DEFTF options to control these defaults. To disable default value usage for zero TR and TF, specify the DISABLE_DEFAULT_PULSE_PARAMS option.
+
+WARNING(ORPSIM-15459): In device V_V9, default values (TF=1.00e-09) are used for zero TR and TF. Use the DEFTR and DEFTF options to control these defaults. To disable default value usage for zero TR and TF, specify the DISABLE_DEFAULT_PULSE_PARAMS option.
+
+**** 06/17/25 18:41:34 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-pspicefiles\schematic1\mlt.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VX)   -1.0000  (   VY)   -1.5000  (  VDD)    2.4000  (  VSS)   -2.4000      
+
+( VOUT)     .4003  (N15395)    2.2783 (N15545)    -.9982 (N15557)   -1.4982     
+
+(N15605)    1.5241 (N15801)    1.5259 (N15841)    2.0865 (N15867)    -.0211     
+
+(N16099)    -.9982 (N16111)    1.3980 (X_U3B.1)    -.0608                       
+
+(X_U3B.3)    -.0608                   (X_U3B.4)    -.0608                       
+
+(X_U3B.5)    4.9392                   (X_U3B.6)    -.0590                       
+
+(X_U3B.7)    -.0618                   (X_U3B.8)    -.9982                       
+
+(X_U3B.9)    1.7007                   (X_U4B.1)    -.0608                       
+
+(X_U4B.3)    -.0608                   (X_U4B.4)    -.0608                       
+
+(X_U4B.5)    4.9392                   (X_U4B.6)    -.0590                       
+
+(X_U4B.7)    -.0623                   (X_U4B.8)   -1.4982                       
+
+(X_U4B.9)    2.8559                   (X_U5B.1)    -.1568                       
+
+(X_U5B.3)    -.1568                   (X_U5B.4)    -.1567                       
+
+(X_U5B.5)    4.8432                   (X_U5B.6)    -.1549                       
+
+(X_U5B.7)    -.1577                   (X_U5B.8)    -.9982                       
+
+(X_U5B.9)    2.7046                   (X_U6B.1)    -.1568                       
+
+(X_U6B.3)    -.1568                   (X_U6B.4)    -.6750                       
+
+(X_U6B.5)    4.8432                   (X_U6B.6)    -.1549                       
+
+(X_U6B.7)   12.2720                   (X_U6B.8)    1.3980                       
+
+(X_U6B.9)    1.3911                   (X_U7B.1) 98.76E-09                       
+
+(X_U7B.3) 98.76E-09                   (X_U7B.4)-17.30E-06                       
+
+(X_U7B.5)    5.0000                   (X_U7B.6)     .0019                       
+
+(X_U7B.7) 417.4E-06                   (X_U7B.8)     .4003                       
+
+(X_U7B.9)    2.8969                   (X_U3B.11)    -.9967                      
+
+(X_U3B.12) -191.0600                  (X_U3B.15)    -.9982                      
+
+(X_U3B.17)    -.9991                  (X_U3B.18)    -.9982                      
+
+(X_U3B.19)   -5.0608                  (X_U3B.20)   -1.6000                      
+
+(X_U3B.22)   -1.0000                  (X_U3B.23)    2.2783                      
+
+(X_U3B.25)    -.9991                  (X_U3B.26)    -.0608                      
+
+(X_U3B.28)   99.9390                  (X_U3B.34)     .8983                      
+
+(X_U3B.37)    -.9977                  (X_U3B.41)    -.9977                      
+
+(X_U4B.11)   -1.4997                  (X_U4B.12) -191.0600                      
+
+(X_U4B.15)   -1.4982                  (X_U4B.17)   -1.4991                      
+
+(X_U4B.18)   -1.4982                  (X_U4B.19)   -5.0608                      
+
+(X_U4B.20)   -1.6000                  (X_U4B.22)   -1.5000                      
+
+(X_U4B.23)    2.2783                  (X_U4B.25)   -1.4991                      
+
+(X_U4B.26)    -.0608                  (X_U4B.28)   99.9390                      
+
+(X_U4B.34)     .8983                  (X_U4B.37)   -1.4987                      
+
+(X_U4B.41)   -1.4987                  (X_U5B.11)   -1.0054                      
+
+(X_U5B.12) -191.1600                  (X_U5B.15)    -.9982                      
+
+(X_U5B.17)    -.9991                  (X_U5B.18)    -.9982                      
+
+(X_U5B.19)   -5.1568                  (X_U5B.20)   -1.6000                      
+
+(X_U5B.22)   -1.0000                  (X_U5B.23)    2.0865                      
+
+(X_U5B.25)    -.9991                  (X_U5B.26)    -.1568                      
+
+(X_U5B.28)   99.8430                  (X_U5B.34)     .7065                      
+
+(X_U5B.37)   -1.0006                  (X_U5B.41)   -1.0006                      
+
+(X_U6B.11)    1.5401                  (X_U6B.12) -191.1600                      
+
+(X_U6B.15)    1.3980                  (X_U6B.17)    -.0106                      
+
+(X_U6B.18)     .0018                  (X_U6B.19)   -5.1568                      
+
+(X_U6B.20)   -1.6000                  (X_U6B.22) 44.86E-06                      
+
+(X_U6B.23)    2.0865                  (X_U6B.25)    -.0106                      
+
+(X_U6B.26)    -.1568                  (X_U6B.28)   99.8430                      
+
+(X_U6B.34)     .7065                  (X_U6B.37)    1.4004                      
+
+(X_U6B.41)    1.4004                  (X_U7B.11)     .4002                      
+
+(X_U7B.12) -191.0000                  (X_U7B.15)     .4003                      
+
+(X_U7B.17)    1.5250                  (X_U7B.18)    1.5259                      
+
+(X_U7B.19)   -5.0000                  (X_U7B.20)   -1.6000                      
+
+(X_U7B.22)    1.5241                  (X_U7B.23)    2.4000                      
+
+(X_U7B.25)    1.5250                  (X_U7B.26) 1.099E-06                      
+
+(X_U7B.28)  100.0000                  (X_U7B.34)    1.0200                      
+
+(X_U7B.37)     .4003                  (X_U7B.41)     .4003                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V8         6.301E-08
+    V_V9         5.947E-06
+    V_V2         4.614E-04
+    V_V1        -4.704E-04
+    X_U4B.VV262  -5.010E-12
+    X_U4B.VV261  -1.000E-10
+    X_U4B.VV256  -1.910E-10
+    X_U4B.VV245   1.111E-13
+    X_U4B.VFI100   4.998E-05
+    X_U4B.VIC2  -5.002E-05
+    X_U4B.VV219   2.407E-12
+    X_U4B.VV234  -5.010E-12
+    X_U6B.VV262  -5.528E-12
+    X_U6B.VV261  -8.758E-11
+    X_U6B.VV256  -2.034E-10
+    X_U6B.VV245   3.010E-12
+    X_U6B.VFI100  -4.736E-03
+    X_U6B.VIC2   2.454E-04
+    X_U6B.VV219  -4.491E-03
+    X_U6B.VV234  -4.492E-12
+    X_U7B.VV262  -5.010E-12
+    X_U7B.VV261  -1.000E-10
+    X_U7B.VV256  -1.910E-10
+    X_U7B.VV245   2.010E-12
+    X_U7B.VFI100   2.207E-06
+    X_U7B.VIC2  -2.247E-06
+    X_U7B.VV219   6.297E-13
+    X_U7B.VV234  -5.010E-12
+    X_U5B.VV262  -5.010E-12
+    X_U5B.VV261  -1.000E-10
+    X_U5B.VV256  -1.910E-10
+    X_U5B.VV245   6.094E-13
+    X_U5B.VFI100   2.396E-04
+    X_U5B.VIC2  -2.396E-04
+    X_U5B.VV219   1.717E-12
+    X_U5B.VV234  -5.010E-12
+    X_U3B.VV262  -5.010E-12
+    X_U3B.VV261  -1.000E-10
+    X_U3B.VV256  -1.910E-10
+    X_U3B.VV245   6.123E-13
+    X_U3B.VFI100  -5.002E-05
+    X_U3B.VIC2   4.998E-05
+    X_U3B.VV219   1.906E-12
+    X_U3B.VV234  -5.010E-12
+
+    TOTAL POWER DISSIPATION   8.44E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/17/25 18:41:34 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mlt"  [ f:\simran_intern\orcade\multiplier_ramp-pspicefiles\schematic1\mlt.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

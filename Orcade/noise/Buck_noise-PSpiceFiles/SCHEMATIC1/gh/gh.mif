@@ -1,0 +1,3 @@
+ lib=C:\Cadence\OrCADX_24.1\tools\PSpice\Library\opamp.lib, offset=53165, size=1419
+ lib=C:\Cadence\OrCADX_24.1\tools\PSpice\Library\breakout.lib, offset=25112, size=507
+ lib=C:\Cadence\OrCADX_24.1\tools\PSpice\Library\breakout.lib, offset=26122, size=334

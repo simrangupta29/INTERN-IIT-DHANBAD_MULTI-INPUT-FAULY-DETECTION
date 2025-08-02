@@ -1,0 +1,106 @@
+
+**** 06/19/25 12:17:08 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-noise_trans"  [ F:\SIMRAN_INTERN\Orcade\noise_ramp-PSpiceFiles\SCHEMATIC1\noise_trans.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "noise_trans.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source NOISE_RAMP
+R_R12         N18124 N18136 R_R12 10k TC=0,0 
+.model        R_R12 RES R=1 DEV=5% TC1=0 TC2=0
+V_V1         VDD 0 2.4
+X_U3B         VX N17452 N17452 N17288 VSS awbmc33172
+X_U4B         VY N17464 N17464 N17288 VSS awbmc33172
+R_R52         N18136 N17840 R_R52 250k TC=0,0 
+.model        R_R52 RES R=1 DEV=5% TC1=0 TC2=0
+R_R22         N17808 VDD R_R22 1k TC=0,0 
+.model        R_R22 RES R=1 DEV=5% TC1=0 TC2=0
+R_R42         N17760 VOUT R_R42 500k TC=0,0 
+.model        R_R42 RES R=1 DEV=5% TC1=0 TC2=0
+V_V2         VSS 0 -2.4
+R_R32         N17808 N17760 R_R32 250k TC=0,0 
+.model        R_R32 RES R=1 DEV=5% TC1=0 TC2=0
+R_R31         N17288 N17512 R_R31 250k TC=0,0 
+.model        R_R31 RES R=1 DEV=5% TC1=0 TC2=0
+R_R11         N17452 N17464 R_R11 10k TC=0,0 
+.model        R_R11 RES R=1 DEV=5% TC1=0 TC2=0
+X_U5B         VX N18124 N18124 N17808 VSS awbmc33172
+X_U7B         N17512 N17760 VOUT VDD VSS awbmc33172
+R_R41         N17512 0 R_R41 500k TC=0,0 
+.model        R_R41 RES R=1 DEV=5% TC1=0 TC2=0
+R_R21         N17288 VDD R_R21 1k TC=0,0 
+.model        R_R21 RES R=1 DEV=5% TC1=0 TC2=0
+X_U6B         0 N17840 N18136 N17808 VSS awbmc33172
+R_R51         N17840 VY R_R51 250k TC=0,0 
+.model        R_R51 RES R=1 DEV=5% TC1=0 TC2=0
+X_V10         VX 0 VSINN PARAMS: FREQ=10k VAMPL=0.2 VOFF=0 PHASE=0 DF=0 TD=0
++  NVAL=0.02
+X_V11         VY 0 VSINN PARAMS: FREQ=100 VAMPL=0.2 VOFF=0 PHASE=0 DF=0 TD=0
++  NVAL=0.02
+R_R58         N20463 N20423 R_R58 250k TC=0,0 
+.model        R_R58 RES R=1 DEV=5% TC1=0 TC2=0
+R_R53         N20009 VDD R_R53 1k TC=0,0 
+.model        R_R53 RES R=1 DEV=5% TC1=0 TC2=0
+V_V13         VSS 0 -2.4
+R_R60         N20423 VOUT R_R60 500k TC=0,0 
+.model        R_R60 RES R=1 DEV=5% TC1=0 TC2=0
+R_R56         N20009 N20221 R_R56 250k TC=0,0 
+.model        R_R56 RES R=1 DEV=5% TC1=0 TC2=0
+X_U12B         0 N20489 N20733 N20463 VSS awbmc33172
+R_R57         N20489 N20133 R_R57 250k TC=0,0 
+.model        R_R57 RES R=1 DEV=5% TC1=0 TC2=0
+X_U9B         N20133 N20161 N20161 N20009 VSS awbmc33172
+X_U11B         WITH_NOISE N20721 N20721 N20463 VSS awbmc33172
+X_U10B         N20221 N20423 VOUT VDD VSS awbmc33172
+R_R61         N20721 N20733 R_R61 10k TC=0,0 
+.model        R_R61 RES R=1 DEV=5% TC1=0 TC2=0
+R_R62         N20733 N20489 R_R62 250k TC=0,0 
+.model        R_R62 RES R=1 DEV=5% TC1=0 TC2=0
+R_R55         N20221 0 R_R55 500k TC=0,0 
+.model        R_R55 RES R=1 DEV=5% TC1=0 TC2=0
+V_V12         VDD 0 2.4
+X_U8B         WITH_NOISE N20149 N20149 N20009 VSS awbmc33172
+R_R59         N20463 VDD R_R59 1k TC=0,0 
+.model        R_R59 RES R=1 DEV=5% TC1=0 TC2=0
+R_R54         N20149 N20161 R_R54 10k TC=0,0 
+.model        R_R54 RES R=1 DEV=5% TC1=0 TC2=0
+V_V14         CLEAN 0  
++SIN 0 0.2 10K 0 0 0
+V_V15         N21159 0  
++SIN 0 0.2 100 0 0 0
+E_E1         WITH_NOISE CLEAN VALUE { (RNDR-0.5)/5 }
+E_E2         N20133 N21159 VALUE { (RNDR-0.5)/5 }
+E_E3         WITH_NOISE CLEAN VALUE { (RNDR-0.5)/5 }
+R_R63         0 WITH_NOISE  1k TC=0,0 
+V_V17         CLEAN 0 1
+
+**** RESUMING noise_trans.cir ****
+.END
+
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving V_V13. You may break the loop by adding a series resistance
+

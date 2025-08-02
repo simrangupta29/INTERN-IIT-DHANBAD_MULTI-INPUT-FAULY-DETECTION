@@ -1,0 +1,176 @@
+
+**** 06/19/25 18:10:23 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-v"  [ F:\SIMRAN_INTERN\Orcade\noise\leadlag_noise-PSpiceFiles\SCHEMATIC1\v.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "v.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 110ms 0 50us 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LEADLAG_NOISE
+C_C1         N01466 VOUT  0.1595u  TC=0,0 
+X_U1         N01754 N01466 V+ V- VOUT uA741
+R_R3         N01466 VOUT  10k TC=0,0 
+R_R1         VN N01466  1k TC=0,0 
+V_V1         V+ 0 12
+C_C2         0 N01754  2.15325u  TC=0,0 
+V_V2         V- 0 -12
+R_R2         VP N01754  10k TC=0,0 
+X_V5         VN 0 VSINN PARAMS: FREQ=100 VAMPL=0.2 VOFF=0 PHASE=0 DF=0 TD=0
++  NVAL=0.15m
+X_V6         VP 0 VSINN PARAMS: FREQ=10 VAMPL=0.4 VOFF=0 PHASE=0 DF=0 TD=0
++  NVAL=0.15m
+
+**** RESUMING v.cir ****
+.END
+
+**** 06/19/25 18:10:23 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-v"  [ F:\SIMRAN_INTERN\Orcade\noise\leadlag_noise-PSpiceFiles\SCHEMATIC1\v.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 06/19/25 18:10:23 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-v"  [ F:\SIMRAN_INTERN\Orcade\noise\leadlag_noise-PSpiceFiles\SCHEMATIC1\v.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 06/19/25 18:10:23 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-v"  [ F:\SIMRAN_INTERN\Orcade\noise\leadlag_noise-PSpiceFiles\SCHEMATIC1\v.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (   VN) 74.83E-06  (   VP) 74.83E-06      
+
+( VOUT)    -.0077  (N01466)-703.1E-06 (N01754)-722.4E-06 (X_U1.6) 734.0E-09     
+
+(X_U1.7)    -.0077 (X_U1.8)    -.0077 (X_U1.9)    0.0000 (X_V5.M)    0.0000     
+
+(X_V6.M)    0.0000 (X_U1.10)    -.6084                   (X_U1.11)   11.9600    
+
+(X_U1.12)   11.9600                   (X_U1.13)    -.5945                       
+
+(X_U1.14)    -.5945                   (X_U1.53)   11.0000                       
+
+(X_U1.54)  -11.0000                   (X_U1.90)-698.2E-06                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.337E-03
+    V_V2         1.337E-03
+    X_U1.vb      7.340E-12
+    X_U1.vc      1.101E-11
+    X_U1.ve      1.250E-11
+    X_U1.vlim   -6.982E-07
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+    X_V5.VSIN   -7.779E-07
+    X_V6.VSIN   -7.973E-08
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/19/25 18:10:23 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-v"  [ F:\SIMRAN_INTERN\Orcade\noise\leadlag_noise-PSpiceFiles\SCHEMATIC1\v.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

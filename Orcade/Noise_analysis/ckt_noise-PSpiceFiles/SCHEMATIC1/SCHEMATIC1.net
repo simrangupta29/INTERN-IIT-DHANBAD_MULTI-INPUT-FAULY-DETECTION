@@ -1,0 +1,13 @@
+* source CKT_NOISE
+R_R1         IN N00307  1k TC=0,0 
+R_R2         N00286 OUT  2k TC=0,0 
+R_R3         0 OUT  4.7 TC=0,0 
+R_R4         N00341 VDD  0.02 TC=0,0 
+R_R5         N00307 N00286  2k TC=0,0 
+C_C1         N00286 OUT  1n  TC=0,0 
+V_V1         N00341 0 12
+V_V2         0 VSS 12
+X_U3         0 N00307 VDD VSS OUT LM741
+V_V4         IN N01555  
++SIN 0 0.5 1K 0 0 0
+X_V5         N01555 0 VRNDMN PARAMS: NVAL=0.015m

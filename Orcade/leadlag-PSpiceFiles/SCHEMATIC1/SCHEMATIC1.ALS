@@ -1,0 +1,17 @@
+.ALIASES
+X_U1            U1(+=N00326 -=N00266 V+=V+ V-=V- OUT=VOUT ) CN @LEADLAG.SCHEMATIC1(sch_1):INS138@OPAMP.uA741.Normal(chips)
+R_R1            R1(1=VN 2=N00266 ) CN @LEADLAG.SCHEMATIC1(sch_1):INS181@ANALOG.R.Normal(chips)
+R_R2            R2(1=VP 2=N00326 ) CN @LEADLAG.SCHEMATIC1(sch_1):INS197@ANALOG.R.Normal(chips)
+R_R3            R3(1=N00266 2=VOUT ) CN @LEADLAG.SCHEMATIC1(sch_1):INS213@ANALOG.R.Normal(chips)
+C_C1            C1(1=N00266 2=VOUT ) CN @LEADLAG.SCHEMATIC1(sch_1):INS238@ANALOG.C.Normal(chips)
+C_C2            C2(1=0 2=N00326 ) CN @LEADLAG.SCHEMATIC1(sch_1):INS339@ANALOG.C.Normal(chips)
+V_V1            V1(+=V+ -=0 ) CN @LEADLAG.SCHEMATIC1(sch_1):INS650@SOURCE.VDC.Normal(chips)
+V_V2            V2(+=V- -=0 ) CN @LEADLAG.SCHEMATIC1(sch_1):INS666@SOURCE.VDC.Normal(chips)
+V_V3            V3(+=VN -=0 ) CN @LEADLAG.SCHEMATIC1(sch_1):INS904@SOURCE.VSIN.Normal(chips)
+V_V4            V4(+=VP -=0 ) CN @LEADLAG.SCHEMATIC1(sch_1):INS932@SOURCE.VSIN.Normal(chips)
+_    _(V+=V+)
+_    _(V-=V-)
+_    _(Vn=VN)
+_    _(Vout=VOUT)
+_    _(Vp=VP)
+.ENDALIASES

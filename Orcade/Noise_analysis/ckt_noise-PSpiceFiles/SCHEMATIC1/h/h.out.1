@@ -1,0 +1,299 @@
+
+**** 06/17/25 20:12:19 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-h"  [ F:\Gopal_work\Orcad_work\Noise_analysis\ckt_noise-PSpiceFiles\SCHEMATIC1\h.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "h.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 5 10k 1Meg
+.NOISE V([OUT]) V_V3 1k
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CKT_NOISE
+R_R1         IN N00307  1k TC=0,0 
+R_R2         N00286 OUT  2k TC=0,0 
+R_R3         0 OUT  4.7 TC=0,0 
+R_R4         N00341 VDD  0.02 TC=0,0 
+R_R5         N00307 N00286  2k TC=0,0 
+C_C1         N00286 OUT  1n  TC=0,0 
+V_V1         N00341 0 12
+V_V2         0 VSS 12
+V_V3         IN 0 DC 0Vdc AC 1Vac 
+X_U3         0 N00307 VDD VSS OUT LM741
+
+**** RESUMING h.cir ****
+.END
+
+**** 06/17/25 20:12:19 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-h"  [ F:\Gopal_work\Orcad_work\Noise_analysis\ckt_noise-PSpiceFiles\SCHEMATIC1\h.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.x_lm741.dx X_U3.x_lm741.dy 
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 06/17/25 20:12:19 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-h"  [ F:\Gopal_work\Orcad_work\Noise_analysis\ckt_noise-PSpiceFiles\SCHEMATIC1\h.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.x_lm741.qx 
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 06/17/25 20:12:19 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-h"  [ F:\Gopal_work\Orcad_work\Noise_analysis\ckt_noise-PSpiceFiles\SCHEMATIC1\h.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT) 415.0E-06  (  VDD)   12.0000  (  VSS)  -12.0000      
+
+(N00286) 217.1E-06 (N00307) 19.18E-06 (N00341)   12.0000                        
+
+(X_U3.x_lm741.6)-1.307E-06            (X_U3.x_lm741.7)     .0048                
+
+(X_U3.x_lm741.8)     .0048            (X_U3.x_lm741.9)    0.0000                
+
+(X_U3.x_lm741.10)    -.6077           (X_U3.x_lm741.11)   11.9600               
+
+(X_U3.x_lm741.12)   11.9600           (X_U3.x_lm741.13)    -.5938               
+
+(X_U3.x_lm741.14)    -.5938           (X_U3.x_lm741.53)   11.0000               
+
+(X_U3.x_lm741.54)  -11.0000           (X_U3.x_lm741.90)     .0884               
+
+(X_U3.x_lm741.91)   40.0000           (X_U3.x_lm741.92)  -40.0000               
+
+(X_U3.x_lm741.99)-13.37E-06           
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.337E-03
+    V_V2        -1.337E-03
+    V_V3         1.918E-08
+    X_U3.x_lm741.vb  -1.307E-11
+    X_U3.x_lm741.vc   1.100E-11
+    X_U3.x_lm741.ve   1.251E-11
+    X_U3.x_lm741.vlim   8.839E-05
+    X_U3.x_lm741.vlp  -3.991E-11
+    X_U3.x_lm741.vln  -4.009E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+
+**** 06/17/25 20:12:19 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-h"  [ F:\Gopal_work\Orcad_work\Noise_analysis\ckt_noise-PSpiceFiles\SCHEMATIC1\h.sim ] 
+
+
+ ****     NOISE ANALYSIS                   TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+     FREQUENCY =  1.000E+04 HZ
+
+
+
+
+ **** DIODE SQUARED NOISE VOLTAGES (SQ V/HZ)
+
+
+
+
+          X_U3.x_lm741.dc
+                     X_U3.x_lm741.de
+                                X_U3.x_lm741.dlp
+                                           X_U3.x_lm741.dln
+                                                      X_U3.x_lm741.dp
+                                                                 
+
+ RS       0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.000E+00
+
+ ID       3.810E-29  3.810E-29  5.925E-21  5.951E-21  0.000E+00
+
+ FN       0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.000E+00
+
+ TOTAL    3.810E-29  3.810E-29  5.925E-21  5.951E-21  0.000E+00
+
+
+
+ **** TRANSISTOR SQUARED NOISE VOLTAGES (SQ V/HZ)
+
+
+
+
+          X_U3.x_lm741.q1
+                     X_U3.x_lm741.q2
+                                
+
+ RB       0.000E+00  0.000E+00
+
+ RC       0.000E+00  0.000E+00
+
+ RE       0.000E+00  0.000E+00
+
+ IBSN     3.151E-18  1.539E-18
+
+ IC       5.185E-16  5.162E-16
+
+ IBFN     0.000E+00  0.000E+00
+
+ TOTAL    5.217E-16  5.177E-16
+
+
+
+ **** RESISTOR SQUARED NOISE VOLTAGES (SQ V/HZ)
+
+
+
+
+          R_R1       R_R2       R_R3       R_R4       R_R5       X_U3.x_lm741.r2
+                                                                            
+
+ TOTAL    1.885E-16  2.347E-17  1.579E-20  1.939E-30  2.384E-17  2.966E-18
+
+
+
+
+          X_U3.x_lm741.rc1
+                     X_U3.x_lm741.rc2
+                                X_U3.x_lm741.re1
+                                           X_U3.x_lm741.re2
+                                                      X_U3.x_lm741.ree
+                                                                 X_U3.x_lm741.ro1
+                                                                            
+
+ TOTAL    1.573E-15  1.573E-15  5.417E-16  5.417E-16  2.701E-25  1.483E-21
+
+
+
+
+          X_U3.x_lm741.ro2
+                     X_U3.x_lm741.rp
+                                
+
+ TOTAL    7.679E-28  0.000E+00
+
+
+
+
+
+ **** Top Contributors To Output Noise [DeviceName = TotalDeviceNoise (Contribution percentage)] ***
+X_U3.x_lm741.rc2 =   1.573E-15 (28.56 %)
+X_U3.x_lm741.rc1 =   1.573E-15 (28.56 %)
+X_U3.x_lm741.re1 =   5.417E-16 ( 9.83 %)
+X_U3.x_lm741.re2 =   5.417E-16 ( 9.83 %)
+X_U3.x_lm741.q1 =   5.217E-16 ( 9.47 %)
+
+
+
+
+
+
+
+ **** TOTAL OUTPUT NOISE VOLTAGE         =  5.509E-15 SQ V/HZ
+
+                                         =  7.422E-08 V/RT HZ
+
+      TRANSFER FUNCTION VALUE:
+
+        V(OUT)/V_V3                    =  3.372E+00
+
+      EQUIVALENT INPUT NOISE AT V_V3 =  2.201E-08 V/RT HZ
+
+
+          JOB CONCLUDED
+
+**** 06/17/25 20:12:19 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-h"  [ F:\Gopal_work\Orcad_work\Noise_analysis\ckt_noise-PSpiceFiles\SCHEMATIC1\h.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

@@ -1,0 +1,9 @@
+.ALIASES
+V_V17           V17(+=V -=0 ) CN @NOISE_RNDC.SCHEMATIC1(sch_1):INS22801@SOURCE.VDC.Normal(chips)
+R_R63           R63(1=0 2=VOUT ) CN @NOISE_RNDC.SCHEMATIC1(sch_1):INS22757@ANALOG.R.Normal(chips)
+E_E3            E3(OUT+=VOUT OUT-=V ) CN @NOISE_RNDC.SCHEMATIC1(sch_1):INS22729@ABM.EVALUE.Normal(chips)
+_    _(V=V)
+_    _(CLEAN=V)
+_    _(VOUT=VOUT)
+_    _(WITH_NOISE=VOUT)
+.ENDALIASES

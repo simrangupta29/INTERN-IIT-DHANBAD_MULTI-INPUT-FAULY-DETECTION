@@ -1,0 +1,85 @@
+
+**** 07/08/25 11:09:32 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-NOISE_TRANS"  [ F:\SIMRAN_INTERN\Orcade\noise_rndr-pspicefiles\schematic1\noise_trans.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "NOISE_TRANS.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source NOISE_RNDR
+R_R63         0 VOUT  1k TC=0,0 
+V_V17         V 0 1V
+E_E3         VOUT V VALUE { (RNDR-0.5)/5 }
+
+**** RESUMING NOISE_TRANS.cir ****
+.END
+
+**** 07/08/25 11:09:32 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-NOISE_TRANS"  [ F:\SIMRAN_INTERN\Orcade\noise_rndr-pspicefiles\schematic1\noise_trans.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    V)    1.0000  ( VOUT)     .9002  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V17       -9.002E-04
+
+    TOTAL POWER DISSIPATION   9.00E-04  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 07/08/25 11:09:32 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-NOISE_TRANS"  [ F:\SIMRAN_INTERN\Orcade\noise_rndr-pspicefiles\schematic1\noise_trans.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

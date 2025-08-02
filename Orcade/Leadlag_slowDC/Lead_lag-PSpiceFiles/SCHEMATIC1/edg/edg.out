@@ -1,0 +1,219 @@
+
+**** 07/07/25 19:14:11 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-edg"  [ F:\SIMRAN_INTERN\Orcade\Leadlag_slowDC\lead_lag-pspicefiles\schematic1\edg.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "edg.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100m 0 50u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LEAD_LAG
+R_R1         VN N01466 R_R1 1k TC=0,0 
+.model        R_R1 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+V_V1         V+ 0 5
+X_U1         N01754 N01466 V+ V- VOUT uA741
+C_C1         N01466 VOUT C_C1 0.1595u  TC=0,0 
+.model        C_C1 CAP C=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0 VC1=0 VC2=0
+R_R2         VP N01754 R_R2 10k TC=0,0 
+.model        R_R2 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+C_C2         0 N01754 C_C2 1.595u  TC=0,0 
+.model        C_C2 CAP C=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0 VC1=0 VC2=0
+V_V2         V- 0 -5
+R_R3         N01466 VOUT R_R3 10k TC=0,0 
+.model        R_R3 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+V_0_0_4_100Hz         VN N01768   PWL    
++ 0 0 0.01 0.04 0.02 0.08 0.03 0.12 0.04 0.16 0.05 0.2 0.06 0.24 0.07 0.28
++  0.08 0.32 0.09 0.36 0.1 0.4  
+V_0_0_5_50Hz         VP N01774   PWL    
++ 0 0 0.02 0.1 0.04 0.2 0.06 0.3 0.08 0.4 0.1 0.5  
+X_V3         N01768 0 VRNDMN PARAMS: NVAL=0.015m
+X_V4         N01774 0 VRNDMN PARAMS: NVAL=0.015m
+.PARAM  r_var=1k
+
+**** RESUMING edg.cir ****
+.END
+
+**** 07/07/25 19:14:11 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-edg"  [ F:\SIMRAN_INTERN\Orcade\Leadlag_slowDC\lead_lag-pspicefiles\schematic1\edg.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 07/07/25 19:14:11 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-edg"  [ F:\SIMRAN_INTERN\Orcade\Leadlag_slowDC\lead_lag-pspicefiles\schematic1\edg.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 07/07/25 19:14:11 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-edg"  [ F:\SIMRAN_INTERN\Orcade\Leadlag_slowDC\lead_lag-pspicefiles\schematic1\edg.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            R_R2            R_R3            
+           R    1               1               1            
+
+
+**** 07/07/25 19:14:11 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-edg"  [ F:\SIMRAN_INTERN\Orcade\Leadlag_slowDC\lead_lag-pspicefiles\schematic1\edg.sim ] 
+
+
+ ****     Capacitor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               C_C1            C_C2            
+           C    1               1            
+
+
+**** 07/07/25 19:14:11 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-edg"  [ F:\SIMRAN_INTERN\Orcade\Leadlag_slowDC\lead_lag-pspicefiles\schematic1\edg.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)    5.0000  (   V-)   -5.0000  (   VN) 17.40E-09  (   VP) 17.40E-09      
+
+( VOUT)    -.0078  (N01466)-778.0E-06 (N01754)-797.3E-06 (N01768) 17.40E-09     
+
+(N01774) 17.40E-09 (X_U1.6) 741.2E-09 (X_U1.7)    -.0078 (X_U1.8)    -.0078     
+
+(X_U1.9)    0.0000 (X_U1.10)    -.6085                   (X_U1.11)    4.9603    
+
+(X_U1.12)    4.9603                   (X_U1.13)    -.5946                       
+
+(X_U1.14)    -.5946                   (X_U1.53)    4.0000                       
+
+(X_U1.54)   -4.0000                   (X_U1.90)-698.2E-06                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.656E-04
+    V_V2         5.658E-04
+    V_0_0_4_100Hz  -7.780E-07
+    V_0_0_5_50Hz  -7.973E-08
+    X_U1.vb      7.412E-12
+    X_U1.vc      4.009E-12
+    X_U1.ve      4.541E-12
+    X_U1.vlim   -6.982E-07
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   5.66E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 07/07/25 19:14:11 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-edg"  [ F:\SIMRAN_INTERN\Orcade\Leadlag_slowDC\lead_lag-pspicefiles\schematic1\edg.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .13
+

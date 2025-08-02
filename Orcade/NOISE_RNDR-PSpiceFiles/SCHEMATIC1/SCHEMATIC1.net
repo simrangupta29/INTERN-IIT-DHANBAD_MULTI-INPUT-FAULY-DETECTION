@@ -1,0 +1,4 @@
+* source NOISE_RNDR
+R_R63         0 VOUT  1k TC=0,0 
+V_V17         V 0 1V
+E_E3         VOUT V VALUE { (RNDR-0.5)/5 }

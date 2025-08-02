@@ -1,0 +1,58 @@
+
+**** 07/08/25 11:04:49 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-NOISE_DC"  [ F:\SIMRAN_INTERN\Orcade\noise_rndc-pspicefiles\schematic1\noise_dc.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "NOISE_DC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Rahul Bhattacharya\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM SWEEP 1 50 1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source NOISE_RNDC
+V_V17         V 0 1V
+R_R63         0 VOUT  1k TC=0,0 
+E_E3         VOUT V VALUE { (RNDC-0.5)/5 }
+.PARAM  sweep=1
+
+**** RESUMING NOISE_DC.cir ****
+.END
+
+
+          JOB CONCLUDED
+
+**** 07/08/25 11:04:49 ***** PSpice 24.1.0 (17 April 2025) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-NOISE_DC"  [ F:\SIMRAN_INTERN\Orcade\noise_rndc-pspicefiles\schematic1\noise_dc.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+
