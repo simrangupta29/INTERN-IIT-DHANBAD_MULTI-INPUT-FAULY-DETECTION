@@ -1,0 +1,16 @@
+clc;
+close all;
+clear all;
+file_path='F:\Swati\Result\Lead lag\leadlag_nominal';
+data=readtable(file_path);
+x=data.Time;
+y=data.V_Vout_;
+Vin1=data.V_Vn_;
+Vin2=data.V_Vp_;
+p= polyfitn([Vin1,Vin2],y,7);
+c1=p.Coefficients;
+zg = polyvaln(p,[Vin1(:),Vin2(:)]);
+plot(x,y,'g--',x,zg);
+xlabel('Time');
+ylabel('Voltage');
+legend('Simulated output voltage','Estimated output voltage');
