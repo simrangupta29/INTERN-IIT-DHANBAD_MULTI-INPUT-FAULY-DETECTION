@@ -4,7 +4,7 @@ Analog circuits—particularly in mixed-signal systems—are difficult to test d
 
 To address these challenges, we propose a regression-based fault detection approach, where the output of the Circuit Under Test (CUT) is modeled as a polynomial function of multiple input variables, derived using Taylor series expansion. The polynomial coefficients are estimated using least squares fitting, and fault-free (FF) bounds for each coefficient are established via Monte Carlo simulations under nominal tolerance variations. During testing, any deviation of the estimated coefficients beyond the FF bounds indicates a parametric fault.
 
-🔍 To the best of our knowledge, parametric fault detection in multi-input analog circuits using polynomial regression modelling is attempted for the first time in the literature.
+🔍 To the best of my knowledge, parametric fault detection in multi-input analog circuits using polynomial regression modelling is attempted for the first time in the literature.
 
 ✅ Key Features
 Supports multi-input linear and nonlinear analog circuits
